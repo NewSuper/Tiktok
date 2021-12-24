@@ -1,0 +1,71 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+}
+apply plugin: 'kotlin-kapt'
+apply from: "../junit.build.gradle"
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        debug {
+            multiDexEnabled true
+        }
+        release {
+            multiDexEnabled true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    api "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    api rootProject.ext.dependencies["core-ktx"]
+    api rootProject.ext.dependencies["appcompat"]
+    api rootProject.ext.dependencies["material"]
+    api rootProject.ext.dependencies["constraintlayout"]
+    api rootProject.ext.dependencies["arouter"]
+    api rootProject.ext.dependencies["multidex"]
+    api rootProject.ext.dependencies["glide"]
+    api rootProject.ext.dependencies["banner"]
+    kapt rootProject.ext.dependencies["glide-compiler"]
+    api deps.autosize
+    api deps.utilcodex
+    api deps.RecyclerViewAdapter
+    api deps.viewmodel
+    api deps.livedata
+    api deps.rxjava
+    api deps.rxandroid
+    api deps.eventbus
+    api deps.converter_gson
+    api deps.adapter_rxjava3
+    api deps.retrofit
+    api deps.kotlin_coroutines
+    api deps.logging_interceptor
+    api deps.refresh_layout_kernel
+    api deps.refresh_header_classics
+    api deps.mmkv
+    api 'com.kunminx.arch:unpeek-livedata:6.0.0-beta1'
+}

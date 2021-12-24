@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.aitd.module_main">
+    <application>
+        <activity android:name=".GuideActivity"></activity>
+        <activity android:name=".SplashActivity"
+            android:theme="@style/Main.Splash.Theme">
+
+        </activity>
+        <activity android:name=".MainActivity" />
+    </application>
+</manifest>

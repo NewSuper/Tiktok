@@ -1,0 +1,92 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 应用全局主题设置 AppCompat 后续的样式应继承此样式,以“android:”开头的属性，是系统的属性。而另一种属于自定义的属性-->
+    <style name="Theme.CommonAppCompatTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!--Appbar标题栏主背景色-->
+        <item name="colorPrimary">@color/common_colorPrimary</item>
+        <!--顶部状态栏和底部导航栏默认颜色-->
+        <item name="colorPrimaryDark">@color/common_colorPrimaryDark</item>
+        <!--控件在选中状态或获取焦点状态下使用这个颜色,例如:CheckBox：checked 状态,RadioButton：checked 状态,SwitchCompat：checked 状态,EditText：获取焦点时的 underline 和 cursor 颜色 -->
+        <item name="colorAccent">@color/common_colorAccent</item>
+
+        <!-- 状态条颜色-->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/common_colorStatusBarColor
+        </item>
+
+        <!--状态栏是否是亮色模式-->
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+
+        <!--页面背景色-->
+        <item name="android:windowBackground">@color/common_colorPageBackground</item>
+
+        <!--底部导航栏(navigation bar)颜色,仅作用于 Lollipop 及更高版本。-->
+        <!-- <item name="android:navigationBarColor" tools:targetApi="l">?attr/colorPrimaryDark</item>-->
+
+        <!--某些 Views “normal” 状态下的颜色，常见如：unselected CheckBox 和 RadioButton，失去焦点时的 EditText，Toolbar 溢出按钮颜色等-->
+        <!-- <item name="colorControlNormal">@color/colorControlNormal</item>-->
+
+        <!--所有可点击 Views 触摸状态下的 Ripple（涟漪）效果。仅作用于 Lollipop 及更高版本。-->
+        <!-- <item name="colorControlHighlight">@color/colorControlHighlight</item>-->
+
+        <!--Button normal 状态下的背景色。注意，这种设置与 Button 的 android:background 属性改变背景色不同的是，前者在 Lollipop 及更高版本上会让 Button 依旧保持阴影和 Ripple 触摸效果。-->
+        <!--<item name="colorButtonNormal">@color/colorButtonNormal</item>-->
+
+        <!--快速实现深色主题背景,适配工作全是系统自己做的，适合代码里字体或背景没有使用硬编码设置颜色的情况。因此需要进行详细的测试，确保没有错误的地方。-->
+        <!-- <item name="android:forceDarkAllowed">true</item>-->
+    </style>
+
+    <style name="commont_loading_dialog" parent="android:style/Theme.Dialog">
+        <!--边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--半透明-->
+        <item name="android:windowIsTranslucent">false</item>
+        <!--无标题-->
+        <item name="android:windowNoTitle">true</item>
+        <!--dialog的背景-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--背景是否模糊显示-->
+        <item name="android:backgroundDimEnabled">false</item>
+        <!--是否有遮盖-->
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    <!--灰色半透明弹出框-->
+    <style name="common_bottom_dialog">
+        <!--<item name="android:windowAnimationStyle">@style/MyDialogAnimation</item>--> <!-- 进入和退出的动画 -->
+        <item name="android:windowCloseOnTouchOutside">true</item><!-- 点外边可以消失  -->
+        <item name="android:windowBackground">@android:color/transparent</item><!--背景透明-->
+        <item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:windowIsFloating">true</item><!--是否浮在activity之上-->
+        <item name="android:windowIsTranslucent">true</item><!--半透明-->
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item><!--模糊-->
+    </style>
+
+    <!--底部弹出Dialog动画-->
+    <style name="BottomAnimation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/anim_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/anim_bottom_out</item>
+    </style>
+
+    <!--背景颜色透明的activity dialog样式-->
+    <style name="DialogActivity" parent="Theme.AppCompat.NoActionBar">
+        <!--设置dialog的背景-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--设置Dialog的windowFrame框为无-->
+        <item name="android:windowFrame">@null</item>
+        <!--设置无标题-->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否半透明-->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--设置窗口内容不覆盖-->
+        <item name="android:windowContentOverlay">@null</item>
+        <!--设置动画，在这里使用让它继承系统的Animation.Dialog-->
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <!--背景是否模糊显示-->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+</resources>

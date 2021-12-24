@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.SelectCountryActivity">
+
+        <com.aitd.library_common.widget.BaseToolBar
+            android:id="@+id/btb_selected"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="选择城市" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="17dp"
+            android:background="@drawable/common_bg_search_bar"
+            android:gravity="center">
+
+            <com.aitd.library_common.widget.IconTextView
+                android:id="@+id/tv_country_code_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:drawableLeft="@mipmap/login_ic_reg_search"
+                android:gravity="center"
+                android:onClick="viewOnclick"
+                android:text="@string/seal_search"
+                android:textColor="#C8C8C8"
+                android:textSize="13sp"
+                app:itv_iconPadding="8dp" />
+
+            <LinearLayout
+                android:id="@+id/ly_country_code_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="8dp"
+                    android:src="@mipmap/login_ic_reg_search" />
+
+                <EditText
+                    android:id="@+id/edt_country_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/reg_search_country_name_area_code"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/img_search_country_name_area_code_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="viewOnclick"
+                    android:paddingRight="19dp"
+                    android:src="@mipmap/login_ic_search_gray_close" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <View
+            android:id="@+id/v_search_show_line"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginTop="15dp"
+            android:background="#F1F1F1" />
+
+        <me.yokeyword.indexablerv.IndexableLayout
+            android:id="@+id/layout_rc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            app:indexBar_selectedTextColor="#333333"
+            app:indexBar_textColor="#666666"
+            app:indexBar_textSize="14sp"
+            app:indexBar_textSpace="4dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rc_country_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </LinearLayout>
+</layout>

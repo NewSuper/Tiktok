@@ -1,2 +1,9 @@
 rootProject.name = "start-component"
 include ':app'
+include ':library_common'
+include ':module_main'
+include ':module_login'
+include ':module_chat'
+include ':module_discover'
+include ':module_mine'
+include ':module_wealth'

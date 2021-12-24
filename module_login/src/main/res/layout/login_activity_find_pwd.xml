@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_fp_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:onClick="viewClick"
+            android:paddingTop="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="20dp"
+            android:src="@drawable/common_ic_black_close" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="50dp"
+                    android:text="@string/fp_reset_password"
+                    android:textColor="#333333"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="78dp"
+                    android:layout_marginRight="30dp"
+                    android:orientation="horizontal">
+
+                    <com.aitd.module_login.widget.FloatLabeledEditText
+                        android:id="@+id/edt_fp_mobile_or_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <EditText
+                            android:id="@+id/edt_fp_mobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:enabled="false"
+                            android:gravity="bottom"
+                            android:maxLength="20"
+                            android:textColor="#333333"
+                            android:textColorHint="#CCCCCC"
+                            android:textCursorDrawable="@drawable/login_text_cursor_drawable"
+                            android:textSize="15sp" />
+                    </com.aitd.module_login.widget.FloatLabeledEditText>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/v_under_line_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginRight="30dp"
+                    android:background="#E9E9E9" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="30dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.aitd.module_login.widget.FloatLabeledEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_weight="1"
+                        app:hintText="@string/reg_verification_code">
+
+                        <EditText
+                            android:id="@+id/edt_fp_code"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:gravity="bottom"
+                            android:hint="@string/reg_verification_code_hit"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:textColor="#333333"
+                            android:textColorHint="#CCCCCC"
+                            android:textSize="15sp" />
+                    </com.aitd.module_login.widget.FloatLabeledEditText>
+
+                    <ImageView
+                        android:id="@+id/img_fp_code_close"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:onClick="viewClick"
+                        android:layout_marginRight="20dp"
+                        android:background="@mipmap/login_ic_huati_icon_shousuo_ssk"
+                        android:visibility="gone" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:background="#CCCCCC" />
+
+                    <TextView
+                        android:id="@+id/tv_fp_send_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="9dp"
+                        android:onClick="viewClick"
+                        android:gravity="center"
+                        android:textColor="@color/login_color_cc_blue"
+                        android:maxWidth="150dp"
+                        android:text="@string/reg_get_verification_code" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/v_under_line_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginRight="30dp"
+                    android:background="#E9E9E9" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="30dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.aitd.module_login.widget.FloatLabeledEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_weight="1"
+                        app:hintText="@string/reg_set_pwd">
+
+                        <EditText
+                            android:id="@+id/edt_fp_set_pwd"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@#$%^*"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:gravity="bottom"
+                            android:hint="@string/reg_set_pwd_hit"
+                            android:maxLength="12"
+                            android:textColor="#333333"
+                            android:textColorHint="#CCCCCC"
+                            android:textSize="15sp" />
+                    </com.aitd.module_login.widget.FloatLabeledEditText>
+
+                    <ImageView
+                        android:id="@+id/img_fp_set_pwd_close"
+                        android:layout_width="wrap_content"
+                        android:onClick="viewClick"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:background="@mipmap/login_ic_huati_icon_shousuo_ssk"
+                        android:visibility="gone" />
+
+                    <CheckBox
+                        android:id="@+id/cb_fp_set_pwd_hide_show"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="9dp"
+                        android:button="@null"
+                        android:checked="false"
+                        android:drawableLeft="@drawable/login_checkbox_password_eye" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/v_under_line_set_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginRight="30dp"
+                    android:background="#E9E9E9" />
+                <!--提示语-->
+                <LinearLayout
+                    android:id="@+id/ly_forget_pwd_show"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="9dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fp_please_use"
+                            android:textColor="#666666"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="9dp">
+
+                        <ImageView
+                            android:id="@+id/img_matcher_contains_one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/login_ic_check_fail" />
+
+                        <TextView
+                            android:id="@+id/tv_matcher_contains_one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="7dp"
+                            android:text="@string/fp_please_hit_one"
+                            android:textColor="#666666"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="8dp">
+
+                        <ImageView
+                            android:id="@+id/img_matcher_contains_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/login_ic_check_fail" />
+
+                        <TextView
+                            android:id="@+id/tv_matcher_contains_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="7dp"
+                            android:text="@string/fp_please_hit_two"
+                            android:textColor="#666666"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="8dp">
+
+                        <ImageView
+                            android:id="@+id/img_matcher_contains_three"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/login_ic_check_fail" />
+
+                        <TextView
+                            android:id="@+id/tv_matcher_contains_three"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="7dp"
+                            android:text="@string/fp_please_hit_three"
+                            android:textColor="#666666"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="8dp">
+
+                        <ImageView
+                            android:id="@+id/img_matcher_contains_four"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/login_ic_check_fail" />
+
+                        <TextView
+                            android:id="@+id/tv_matcher_contains_four"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="7dp"
+                            android:text="@string/fp_please_hit_four"
+                            android:textColor="#666666"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="30dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.aitd.module_login.widget.FloatLabeledEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:hintText="@string/fp_confirm_password">
+
+                        <EditText
+                            android:id="@+id/edt_fp_sure_pwd"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@#$%^*"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:gravity="bottom"
+                            android:hint="@string/fp_confirm_password"
+                            android:maxLength="12"
+                            android:textColor="#333333"
+                            android:textColorHint="#CCCCCC"
+                            android:textSize="15sp" />
+                    </com.aitd.module_login.widget.FloatLabeledEditText>
+
+                    <ImageView
+                        android:id="@+id/img_fp_sure_pwd_close"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:onClick="viewClick"
+                        android:background="@mipmap/login_ic_huati_icon_shousuo_ssk"
+                        android:visibility="gone" />
+
+                    <CheckBox
+                        android:id="@+id/cb_fp_sure_pwd_hide_show"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="9dp"
+                        android:button="@null"
+                        android:checked="false"
+                        android:drawableLeft="@drawable/login_checkbox_password_eye" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/v_under_line_sure_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginRight="30dp"
+                    android:background="#E9E9E9" />
+
+                <LinearLayout
+                    android:id="@+id/ly_forget_pwd_check_duble_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="30dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/user_common_two_passwords"
+                        android:textColor="#F26353"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_fp_sure_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginLeft="30dp"
+                    android:onClick="viewClick"
+                    android:layout_marginTop="84dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/login_dl_select_blue_per_nor"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:text="@string/sure"
+                    android:textColor="@color/common_white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

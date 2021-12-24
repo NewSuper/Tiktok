@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <declare-styleable name="BaseToolBar">
+        <attr name="isTvLight" format="boolean" />
+        <attr name="isTvLeft"  format="boolean" />
+        <attr name="isTvRight" format="boolean" />
+        <attr name="title" format="string" />
+        <attr name="showBottomDiv" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_fill_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="IconTextView">
+        <!--图片和文字距离-->
+        <attr name="itv_iconPadding" format="dimension" />
+    </declare-styleable>
+</resources>

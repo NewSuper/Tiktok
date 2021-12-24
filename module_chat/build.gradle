@@ -1,0 +1,79 @@
+if (isModule.toBoolean()) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply from: "../junit.build.gradle"
+
+//apply plugin: 'com.huawei.agconnect'
+//apply plugin: 'com.google.gms.google-services'
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        if (isModule.toBoolean()) {
+            applicationId "com.aitd.module_chat"
+        }
+        versionCode 1
+        versionName "1.0"
+
+        //配置资源名前缀,只能限定xml里面的资源，并不能限定图片资源，所有图片资源仍然需要手动去修改资源名。
+        resourcePrefix "chat_"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        //配置ARouter
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+
+//        ndk {
+//            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "x86","x86_64"
+//        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    sourceSets {
+        main {
+            if (isModule.toBoolean()) {
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+                java {
+                    exclude '*module'
+                }
+            } else {
+                manifest.srcFile 'src/main/module/AndroidManifest.xml'
+            }
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+//    android {
+//        lintOptions {
+//            abortOnError false
+//        }
+//    }
+}
+
+dependencies {
+    implementation project(path: ':library_common')
+    kapt rootProject.ext.dependencies["arouter-compiler"]
+}

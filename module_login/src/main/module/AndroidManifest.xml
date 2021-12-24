@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.aitd.module_login">
+
+    <application>
+        <activity android:name=".ui.SelectCountryActivity"></activity>
+        <activity android:name=".ui.BindMailActivity" />
+        <activity android:name=".ui.AddUserInfoActivity" />
+        <activity android:name=".ui.LanguangActivity" />
+        <activity android:name=".ui.FindPwdActivity" />
+        <activity android:name=".ui.RegisterActivity" />
+        <activity android:name=".ui.LoginHomeActivity" />
+    </application>
+
+</manifest>

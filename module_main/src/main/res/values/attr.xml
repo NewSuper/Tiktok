@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Main_BottomBarItem">
+        <attr name="main_iconNormal" format="reference" />
+        <attr name="main_iconSelected" format="reference" />
+        <attr name="main_itemText" format="string" />
+        <attr name="main_itemTextSize" format="dimension" />
+        <attr name="main_textColorNormal" format="color" />
+        <attr name="main_textColorSelected" format="color" />
+        <attr name="main_itemMarginTop" format="dimension" />
+        <attr name="main_openTouchBg" format="boolean" />
+        <attr name="main_touchDrawable" format="reference" />
+        <attr name="main_iconWidth" format="dimension" />
+        <attr name="main_iconHeight" format="dimension" />
+        <attr name="main_itemPadding" format="dimension" />
+        <attr name="main_unreadTextSize" format="dimension" />
+        <attr name="main_unreadTextColor" format="reference" />
+        <attr name="main_unreadTextBg" format="reference" />
+        <attr name="main_msgTextSize" format="dimension" />
+        <attr name="main_msgTextColor" format="reference" />
+        <attr name="main_msgTextBg" format="reference" />
+        <attr name="main_notifyPointBg" format="reference" />
+        <attr name="main_unreadThreshold" format="integer" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="common_divider">#dfdfdd</color>
+    <color name="common_white">#FFFFFFFF</color>
+    <color name="common_black">#000000</color>
+    <color name="common_gray_page">#F4F5F7</color>
+
+    <color name="common_text_black">#333333</color>
+
+    <color name="common_text_gray_66">#666666</color>
+    <color name="common_text_gray_99">#999999</color>
+    <color name="common_text_gray_cc">#CCCCCC</color>
+
+    <color name="common_text_gray_B8">#B8B8B8</color>
+
+    <color name="common_text_blue">#5083FC</color>
+    <color name="common_fill_blue_1">#C3D6FE</color>
+    <color name="common_fill_blue_2">#5083FC</color>
+    <color name="common_text_blue_3">#5B6A91</color>
+    <color name="common_text_red">#F26353</color>
+
+    <color name="common_colorPrimary">#5083FC</color>
+    <color name="common_colorPrimaryDark">#5083FC</color>
+    <color name="common_colorAccent">#5083FC</color>
+    <color name="common_colorPrimaryVariant">#5083FC</color>
+    <color name="common_colorOnPrimary">#5083FC</color>
+    <!--页面的背景颜色-->
+    <color name="common_colorPageBackground">#ffffff</color>
+    <!--状态栏的颜色-->
+    <color name="common_colorStatusBarColor">#ffffff</color>
+    <!--BaseToolbar颜色-->
+    <color name="common_ToolBarColor">#ffffff</color>
+</resources>
