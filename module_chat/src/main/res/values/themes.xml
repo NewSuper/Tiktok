@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="wealth.Theme.AITDBlock" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Chat.Theme.AITDBlock" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/wealth_purple_500</item>
         <item name="colorPrimaryVariant">@color/wealth_purple_700</item>

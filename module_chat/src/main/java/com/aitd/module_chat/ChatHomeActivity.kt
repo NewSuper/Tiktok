@@ -5,10 +5,12 @@ import com.aitd.library_common.base.BaseActivity
 import com.aitd.library_common.router.ARouterUrl
 import com.alibaba.android.arouter.facade.annotation.Route
 
+
 @Route(path = ARouterUrl.Chat.ROUTE_CHAT_ACTIVITY)
 class ChatHomeActivity : BaseActivity() {
-    override fun init(savedInstanceState: Bundle?) {
-
+    override fun init(saveInstanceState: Bundle?) {
+        TODO("Not yet implemented")
     }
-    override fun getLayoutId(): Int = R.layout.activity_chat_home
+
+    override fun getLayoutId(): Int =R.layout.activity_chat_home
 }
