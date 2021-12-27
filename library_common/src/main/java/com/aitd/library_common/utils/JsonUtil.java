@@ -16,12 +16,15 @@ import java.lang.reflect.Type;
  */
 public class JsonUtil {
 
-    /** 用于解析json的类 */
+    /**
+     * 用于解析json的类
+     */
     public static Gson GSON = new Gson();
 
     /**
      * 把json字符串转换为JavaBean
-     * @param json json字符串
+     *
+     * @param json      json字符串
      * @param beanClass JavaBean的Class
      * @return
      */
@@ -38,6 +41,7 @@ public class JsonUtil {
     /**
      * 把json字符串转换为JavaBean。如果json的根节点就是一个集合，则使用此方法<p>
      * type参数的获取方式为：Type type = new TypeToken<集合泛型>(){}.getType();
+     *
      * @param json json字符串
      * @return type 指定要解析成的数据类型
      */
@@ -53,15 +57,15 @@ public class JsonUtil {
 
 
     /**
-     *  将一个对象转换成 JSON 字符串
-     * */
-    public static String toJson(Object obj){
-        String json=null;
+     * 将一个对象转换成 JSON 字符串
+     */
+    public static String toJson(Object obj) {
+        String json = null;
         try {
             json = GSON.toJson(obj);
-        }catch (Exception e){
+        } catch (Exception e) {
             Log.e("JsonUtil", "object对象转成json字符串时出现异常\n", e);
         }
-        return json+"";
+        return json + "";
     }
 }

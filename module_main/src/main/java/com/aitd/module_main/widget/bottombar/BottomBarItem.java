@@ -20,14 +20,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 
-/**
- * Author : palmer
- * Date   : 2017/6/11
- * E-Mail : lxlfpeng@163.com
- * Desc   :
- */
-
-
 public class BottomBarItem extends LinearLayout {
 
     private Context mContext;

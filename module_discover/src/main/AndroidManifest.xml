@@ -14,8 +14,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.LiveMainActivity" />
-        <activity android:name=".view.CommunityMainActivity" />
-        <activity android:name=".view.RecommendationDetailsActivity" />
+<!--        <activity android:name=".view.LiveMainActivity" />-->
+<!--        <activity android:name=".view.CommunityMainActivity" />-->
+<!--        <activity android:name=".view.RecommendationDetailsActivity" />-->
     </application>
 </manifest>

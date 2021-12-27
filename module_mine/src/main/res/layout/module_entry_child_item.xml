@@ -30,7 +30,7 @@
             android:layout_height="10dp"
             android:layout_gravity="center_vertical"
             android:layout_marginRight="25dp"
-            android:background="@mipmap/arrow"
+            android:background="@mipmap/mine_ic_launcher"
             android:textOff=""
             android:textOn="" />
     </LinearLayout>

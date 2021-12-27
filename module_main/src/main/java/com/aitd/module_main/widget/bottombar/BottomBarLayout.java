@@ -16,12 +16,6 @@ import java.util.List;
 
 import androidx.annotation.Nullable;
 
-/**
- * Author : palmer
- * Date   : 2017/6/11
- * E-Mail : lxlfpeng@163.com
- * Desc   :
- */
 public class BottomBarLayout extends LinearLayout implements View.OnClickListener {
     private List<BottomBarItem> mTabViews;
     private List<Tab> mTabs;

@@ -3,9 +3,9 @@
     package="com.aitd.module_discover">
 
     <application>
-        <activity android:name=".view.WriteMessageActivity" />
+<!--        <activity android:name=".view.WriteMessageActivity" />-->
         <activity android:name=".DiscoverHomeActivity" />
-        <activity android:name=".view.RecommendationDetailsActivity" />
+<!--        <activity android:name=".view.RecommendationDetailsActivity" />-->
     </application>
 
 </manifest>
