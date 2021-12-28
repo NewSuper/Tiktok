@@ -8,7 +8,7 @@ import com.aitd.library_common.network.ExceptionHandle
 import com.kunminx.architecture.ui.callback.UnPeekLiveData
 import kotlinx.coroutines.CoroutineScope
 
-class BaseViewModel:ViewModel() {
+open class BaseViewModel:ViewModel() {
 
     var showDialog:UnPeekLiveData<Boolean> = UnPeekLiveData() //多状态显示
     fun<T> launch (

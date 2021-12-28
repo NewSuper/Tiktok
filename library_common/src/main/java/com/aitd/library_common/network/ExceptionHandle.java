@@ -11,7 +11,12 @@ import java.net.UnknownHostException;
 
 import retrofit2.HttpException;
 
-//网络异常处理类
+/**
+ * Author: palmer
+ * email:lxlfpeng@163.com
+ * desc: 网络异常处理类
+ */
+
 public class ExceptionHandle {
     private static final int UNAUTHORIZED = 401;
     private static final int FORBIDDEN = 403;
@@ -21,39 +26,6 @@ public class ExceptionHandle {
     private static final int BAD_GATEWAY = 502;
     private static final int SERVICE_UNAVAILABLE = 503;
     private static final int GATEWAY_TIMEOUT = 504;
-
-    public static class ResponeThrowable extends Exception{
-        public String code;
-        public String errorMessage;
-        public ResponeThrowable(Throwable throwable,String code){
-            super(throwable);
-            this.code = code;
-        }
-    }
-    //约定异常
-    public class ERROR{
-        /**
-         * 未知错误
-         */
-        public static final String UNKNOWN = "1000";
-        /**
-         * 解析错误
-         */
-        public static final String PARSE_ERROR = "1001";
-        /**
-         * 网络错误
-         */
-        public static final String NETWORD_ERROR = "1002";
-        /**
-         * 协议出错
-         */
-        public static final String HTTP_ERROR = "1003";
-
-        /**
-         * 证书出错
-         */
-        public static final String SSL_ERROR = "1005";
-    }
 
     public static ResponeThrowable handleException(Throwable e) {
         ResponeThrowable ex;
@@ -105,6 +77,44 @@ public class ExceptionHandle {
             //  ex.errorMessage = "未知错误" + e.toString();
             ex.errorMessage = "未知错误，请稍后再试~";
             return ex;
+        }
+    }
+
+
+    /**
+     * 约定异常
+     */
+    public class ERROR {
+        /**
+         * 未知错误
+         */
+        public static final String UNKNOWN = "1000";
+        /**
+         * 解析错误
+         */
+        public static final String PARSE_ERROR = "1001";
+        /**
+         * 网络错误
+         */
+        public static final String NETWORD_ERROR = "1002";
+        /**
+         * 协议出错
+         */
+        public static final String HTTP_ERROR = "1003";
+
+        /**
+         * 证书出错
+         */
+        public static final String SSL_ERROR = "1005";
+    }
+
+    public static class ResponeThrowable extends Exception {
+        public String code;
+        public String errorMessage;
+
+        public ResponeThrowable(Throwable throwable, String code) {
+            super(throwable);
+            this.code = code;
         }
     }
 }

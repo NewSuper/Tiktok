@@ -12,6 +12,8 @@ import android.os.LocaleList;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
 
+import com.aitd.library_common.app.BaseApplication;
+
 import java.util.Locale;
 
 import androidx.core.os.ConfigurationCompat;
@@ -33,6 +35,9 @@ public class MultiLanguageUtil {
      * @return
      */
     public static Context attachBaseContext(Context context) {
+        if (context == null){
+            context = BaseApplication.getAppContext();
+        }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             return createConfigurationResources(context);
         } else {
@@ -84,6 +89,9 @@ public class MultiLanguageUtil {
      */
     public static Locale getAppSettingLocal(Context context) {
         //如果本地有语言信息，以本地为主，如果本地没有使用默认Locale
+        if (context == null){
+            context = BaseApplication.getAppContext();
+        }
         Locale appLocale = getContextLocale(context);
         Locale locale;
         String spLanguage = LanguageSpUtil.getLocaleLanguage(context);
@@ -107,6 +115,9 @@ public class MultiLanguageUtil {
      * @return
      */
     public static Locale getContextLocale(Context context) {
+        if (context == null){
+            context = BaseApplication.getAppContext();
+        }
         Resources resources = context.getResources();
         Configuration configuration = resources.getConfiguration();
         Locale locale;
