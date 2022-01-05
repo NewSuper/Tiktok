@@ -1,0 +1,16 @@
+syntax = "proto3";
+package com.qx.it.protos;
+
+option java_outer_classname="C2SAuth";
+
+// cmd - 12
+message Auth
+{
+	string appId = 1; //APPID
+	string token = 2;	// 鉴权token
+	string deviceNo = 3; // 设备编号，UUID生成，去掉“-”
+	string deviceType = 4; // 设备类型：1-Android；2-IOS
+	string deviceCode = 5; // 设备厂商编号
+	string systemVersion = 6; // 设备系统版本
+	string language = 7; //语言
+}

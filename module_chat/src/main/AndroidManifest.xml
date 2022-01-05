@@ -6,12 +6,16 @@
         android:icon="@mipmap/chat_ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Chat.Theme.AITDBlock">
-        <activity android:name="com.aitd.module_chat.ChatHomeActivity">
+        <activity android:name="com.aitd.module_chat.ui.ChatHomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.MainActivity2"/>
+        <activity android:name=".ui.LoginActivity"/>
+
+        <service android:name=".lib.QXIMService" android:process=":remote"/>
     </application>
 </manifest>

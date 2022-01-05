@@ -6,6 +6,7 @@ if (isModule.toBoolean()) {
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'com.google.protobuf'//protobuf解析
 apply from: "../junit.build.gradle"
 
 //apply plugin: 'com.huawei.agconnect'
@@ -71,9 +72,54 @@ android {
 //            abortOnError false
 //        }
 //    }
-}
 
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    sourceSets {
+        main {
+            java {
+                srcDir 'src/main/java'
+            }
+            proto {
+                srcDir 'src/main/proto'
+            }
+        }
+    }
+}
+protobuf {
+    protoc {
+        artifact = 'com.google.protobuf:protoc:3.5.1' // 也可以配置本地编译器路径
+    }
+
+    generateProtoTasks {
+        all().each { task ->
+            task.builtins {
+                remove java
+            }
+            task.builtins {
+                java {}// 生产java源码
+            }
+        }
+    }
+}
 dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation project(path: ':library_common')
     kapt rootProject.ext.dependencies["arouter-compiler"]
+
+    implementation("com.squareup.okhttp3:okhttp:4.9.0")
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
+    implementation 'com.ejlchina:okhttps-gson:2.4.5'
+
+
+    implementation "com.google.protobuf:protobuf-java:3.11.1"
+    implementation "com.google.protobuf:protoc:3.9.0"
+    implementation "org.greenrobot:eventbus:3.1.1"
+    implementation "com.googlecode.protobuf-java-format:protobuf-java-format:1.2"
+
+    implementation "android.arch.persistence.room:runtime:1.1.1"
+    kapt "android.arch.persistence.room:compiler:1.1.1"
+    implementation "com.birbit:android-priority-jobqueue:2.0.1"
+    implementation "com.github.stuxuhai:jpinyin:1.1.8"
 }

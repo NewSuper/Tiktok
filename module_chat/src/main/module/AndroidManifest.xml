@@ -3,7 +3,7 @@
     package="com.aitd.module_chat">
 
     <application>
-        <activity android:name="com.aitd.module_chat.ChatHomeActivity"></activity>
+        <activity android:name="com.aitd.module_chat.ui.ChatHomeActivity"></activity>
     </application>
 
 </manifest>
