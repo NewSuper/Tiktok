@@ -9,6 +9,7 @@ import android.text.TextUtils;
 import android.util.ArrayMap;
 import android.util.Log;
 
+import com.thread.pool.Priority;
 import com.thread.pool.ThreadDispatcher;
 
 import java.io.File;
