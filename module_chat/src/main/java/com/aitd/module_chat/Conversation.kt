@@ -99,12 +99,12 @@ class Conversation() : Data(), Comparable<Conversation> {
      * 会话中 @ 消息的个数
      * 在清除会话未读数（clearMessagesUnreadStatus:targetId:）的时候，会将此值置成 0。
      */
-    var mentionedCount: Int = 0      //newsuper new add
+    var mentionedCount: Int = 0
 
     /**
      * 最新一条消息
      */
-    var firstMessage: Message? = null       //newsuper new add
+    var firstMessage: Message? = null
     override fun hashCode(): Int {
         return conversationId.hashCode()
     }
@@ -170,7 +170,7 @@ class Conversation() : Data(), Comparable<Conversation> {
         isNew = parcel.readByte() != 0.toByte()
 
         mentionedCount = parcel.readInt()
-        firstMessage = parcel.readParcelable(Message::class.java.classLoader)    //newsuper new add
+        firstMessage = parcel.readParcelable(Message::class.java.classLoader)
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
@@ -196,7 +196,7 @@ class Conversation() : Data(), Comparable<Conversation> {
         parcel.writeByte(if (isNew) 1 else 0)
 
         parcel.writeInt(mentionedCount)
-        parcel.writeParcelable(firstMessage, flags)    //newsuper new add
+        parcel.writeParcelable(firstMessage, flags)
     }
 
     override fun describeContents(): Int {
