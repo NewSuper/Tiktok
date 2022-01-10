@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <ViewStub
+        android:id="@+id/vsCallAudioLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout="@layout/qx_voip_stub_audio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ViewStub
+        android:id="@+id/vsCallVideoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout="@layout/qx_voip_stub_video"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/callTimeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="00:00"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/rlActionBtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/rlActionBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <Button
+            android:id="@+id/mutebtn"
+            style="@style/qx_call_btn1"
+            android:visibility="gone"
+            android:layout_marginLeft="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:drawableTop="@drawable/qx_mute_selector"
+            android:text="@string/qx_voip_mute" />
+
+        <Button
+            android:id="@+id/hangUpBtn"
+            style="@style/qx_call_btn1"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:drawableTop="@drawable/qx_hangup_selector"
+            android:text="@string/qx_voip_hangup" />
+
+        <Button
+            android:id="@+id/handsFreeBtn"
+            style="@style/qx_call_btn1"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:drawableTop="@drawable/qx_handfree_selector"
+            android:text="@string/qx_voip_handsfree" />
+
+        <Button
+            android:id="@+id/switchAudio"
+            style="@style/qx_call_btn1"
+            android:visibility="gone"
+            android:layout_marginRight="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="30dp"
+            android:drawableTop="@drawable/qx_disable_camera_selector"
+            android:text="@string/qx_voip_switch_audio" />
+
+        <Button
+            android:id="@+id/switchCameraBtn"
+            style="@style/qx_call_btn1"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
+            android:drawableTop="@drawable/qx_switch_camera_selector"
+            android:text="@string/qx_voip_switch_camera" />
+
+        <Button
+            android:id="@+id/acceptAudioBtn"
+            style="@style/qx_call_btn1"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="60dp"
+            android:layout_alignParentRight="true"
+            android:drawableTop="@drawable/qx_audio_answer_selector"
+            android:text="@string/qx_voip_accept" />
+
+        <Button
+            android:id="@+id/acceptVideoBtn"
+            style="@style/qx_call_btn1"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="60dp"
+            android:drawableTop="@drawable/qx_video_answer_selector"
+            android:text="@string/qx_voip_accept" />
+
+    </RelativeLayout>
+
+
+
+    <ImageView
+        android:id="@+id/ivMinimize"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:visibility="gone"
+        android:src="@drawable/qx_voip_minimize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

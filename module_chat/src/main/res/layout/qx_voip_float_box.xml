@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="81dp"
+    android:layout_height="81dp"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/qx_voip_float_bg"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/rc_voip_media_type"
+        android:src="@drawable/qx_voip_float_audio"
+        android:layout_width="20dp"
+        android:layout_height="20dp" />
+
+    <TextView
+        android:id="@+id/audioStateTv"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/qx_voice_color"
+        android:layout_marginTop="5dp"
+        android:textSize="12dp"
+        android:text="00:00"/>
+
+</LinearLayout>
