@@ -5,7 +5,7 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/login_ic_launcher"
-        android:label="@string/login_app_name"
+
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/Login.Theme.AITDBlock">
