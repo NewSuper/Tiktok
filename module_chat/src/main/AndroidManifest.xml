@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.aitd.module_chat">
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/chat_ic_launcher"
@@ -17,5 +18,151 @@
         <activity android:name=".ui.LoginActivity"/>
 
         <service android:name=".lib.QXIMService" android:process=":remote"/>
+
+
+        <activity android:name=".ui.ConversationActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="qxsdk" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.aitd.module_chat"
+                    android:pathPrefix="/conversation/"
+                    android:scheme="qxsdk" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.chat.P2PChatActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="com.qx.imui.chat_private" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.aitd.module_chat"
+                    android:pathPrefix="/private_chat/"
+                    android:scheme="qxim" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.chat.GroupChatActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="com.qx.imui.chat_group" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.aitd.module_chat"
+                    android:pathPrefix="/group_chat/"
+                    android:scheme="qxim" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.chat.SystemChatActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="com.qx.imui.chat_system" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.aitd.module_chat"
+                    android:pathPrefix="/system_chat/"
+                    android:scheme="qxim" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.chat.ChatRoomActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="com.qx.imui.chat_chatroom" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="@string/app_package_name"
+                    android:pathPrefix="/chatroom_chat/"
+                    android:scheme="qxim" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".rtc.SingleCallActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+            <intent-filter>
+                <action android:name="qx.rtc.intent.action.voip.SINGLEAUDIO" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="qx.rtc.intent.action.voip.SINGLEVIDEO" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.chat.VideoPlayActivity"/>
+        <activity android:name=".ui.chat.LocationActivity"/>
+        <activity android:name=".ui.chat.LocationDetailActivity"/>
+        <activity android:name=".ui.chat.ImagePageActivity"/>
+        <activity android:name=".ui.image.PicturePreviewActivity"/>
+        <activity android:name=".ui.image.PictureSelectorActivity"/>
+        <activity android:name=".ui.chat.RecordImagePageActivity"/>
+        <activity android:name=".ui.chat.RecordFileActivity"/>
+        <activity android:name=".ui.chat.RecordVideoPlayActivity"/>
+        <activity android:name=".ui.chat.ChatRecordActivity"/>
+        <activity android:name=".ui.chat.ChatGifActivity"/>
+        <activity android:name=".ui.chat.ChatFileActivity"/>
+        <activity android:name=".ui.chat.PreviewX5WebViewActivity"/>
+        <activity android:name=".ui.chat.ChatTextActivity"/>
+        <activity android:name=".ui.chat.ChatVoiceActivity"/>
+        <activity android:name=".ui.photovideo.Camera2RecordActivity"/>
+        <activity android:name=".ui.photovideo.VideoPreviewActivity"/>
+        <activity android:name=".ui.photovideo.ImagePreviewActivity"/>
+
+        <service android:name="com.amap.api.location.APSService" />
+
+        <service
+            android:name="com.tencent.smtt.export.external.DexClassLoaderProviderService"
+            android:label="dexopt"
+            android:process=":dexopt" >
+        </service>
+
     </application>
 </manifest>

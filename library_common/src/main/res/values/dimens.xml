@@ -1,0 +1,269 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="callkit_floatbox_video_width">72dp</dimen>
+    <dimen name="callkit_floatbox_video_height">123dp</dimen>
+
+
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="bottom_menu_btn_height">48dp</dimen>
+    <dimen name="bottom_menu_corner">6dp</dimen>
+    <dimen name="bottom_menu_btn_margin">2dp</dimen>
+    <dimen name="bottom_menu_btn_text_size">18dp</dimen>
+    <dimen name="bottom_menu_layout_margin">12dp</dimen>
+
+    <!-- 上拉下拉 -->
+    <dimen name="load_more_footer_height_classic">60dp</dimen>
+    <dimen name="refresh_header_height_twitter">60dp</dimen>
+    <dimen name="seal_dialog_forward_item_portrait_width">36dp</dimen>
+    <dimen name="seal_dialog_forward_item_portrait_margin_left">17dp</dimen>
+    <dimen name="bl_sp_9">9sp</dimen>
+    <dimen name="bl_sp_10">10sp</dimen>
+    <dimen name="bl_sp_11">11sp</dimen>
+    <dimen name="bl_sp_12">12sp</dimen>
+    <dimen name="bl_sp_13">13sp</dimen>
+    <dimen name="bl_sp_14">14sp</dimen>
+    <dimen name="bl_sp_15">15sp</dimen>
+    <dimen name="bl_sp_16">16sp</dimen>
+    <dimen name="bl_sp_17">17sp</dimen>
+    <dimen name="bl_sp_18">18sp</dimen>
+    <dimen name="sp_9">9sp</dimen>
+
+    <dimen name="bl_extension_board_height">282dp</dimen>
+    <!--对应36px-->
+    <dimen name="t1">18sp</dimen>
+    <dimen name="dp_180">180dp</dimen>
+    <dimen name="dp_97">97dp</dimen>
+    <!--对应34px-->
+    <dimen name="t2">16.5sp</dimen>
+    <!--对应30px-->
+    <dimen name="t3">15sp</dimen>
+    <!--对应28px-->
+    <dimen name="t4">14sp</dimen>
+    <!--对应26px-->
+    <dimen name="t5">13sp</dimen>
+    <!--对应24px-->
+    <dimen name="t6">12sp</dimen>
+    <!--对应22px-->
+    <dimen name="t7">11sp</dimen>
+    <!--对应20px-->
+    <dimen name="t8">10sp</dimen>
+    <dimen name="layout_dimen_line">0.3dp</dimen>
+    <dimen name="dp_0_5">0.5dp</dimen>
+    <dimen name="dp_199">199dp</dimen>
+    <dimen name="dp_117">117dp</dimen>
+    <dimen name="dp_215">215dp</dimen>
+    <dimen name="sp_10">10sp</dimen>
+    <dimen name="sp_11">11sp</dimen>
+    <dimen name="sp_12">12sp</dimen>
+    <dimen name="sp_13">13sp</dimen>
+    <dimen name="sp_14">14sp</dimen>
+    <dimen name="sp_15">15sp</dimen>
+    <dimen name="sp_16">16sp</dimen>
+    <dimen name="sp_17">17sp</dimen>
+    <dimen name="sp_18">18sp</dimen>
+    <dimen name="sp_20">20sp</dimen>
+    <dimen name="sp_22">22sp</dimen>
+    <dimen name="sp_24">24sp</dimen>
+    <dimen name="sp_27">27sp</dimen>
+    <dimen name="sp_30">30sp</dimen>
+    <dimen name="dp_0">0dp</dimen>
+    <dimen name="dp_1">1dp</dimen>
+    <dimen name="dp_2">2dp</dimen>
+    <dimen name="dp_3">3dp</dimen>
+    <dimen name="dp_5">5dp</dimen>
+    <dimen name="dp_6">6dp</dimen>
+    <dimen name="dp_7">7dp</dimen>
+    <dimen name="dp_8">8dp</dimen>
+    <dimen name="dp_9">9dp</dimen>
+    <dimen name="dp_10">10dp</dimen>
+    <dimen name="dp_11">11dp</dimen>
+    <dimen name="dp_12">12dp</dimen>
+    <dimen name="dp_13">13dp</dimen>
+    <dimen name="dp_15">15dp</dimen>
+    <dimen name="dp_14">14dp</dimen>
+    <dimen name="dp_16">16dp</dimen>
+    <dimen name="dp_17">17dp</dimen>
+    <dimen name="dp_18">18dp</dimen>
+    <dimen name="dp_19">19dp</dimen>
+    <dimen name="dp_20">20dp</dimen>
+    <dimen name="dp_21">21dp</dimen>
+    <dimen name="dp_22">22dp</dimen>
+    <dimen name="dp_23">23dp</dimen>
+    <dimen name="dp_24">24dp</dimen>
+    <dimen name="dp_26">26dp</dimen>
+    <dimen name="dp_28">28dp</dimen>
+    <dimen name="dp_27">27dp</dimen>
+    <dimen name="dp_25">25dp</dimen>
+    <dimen name="dp_29">29dp</dimen>
+    <dimen name="dp_30">30dp</dimen>
+    <dimen name="dp_31">31dp</dimen>
+    <dimen name="dp_33">33dp</dimen>
+    <dimen name="dp_32">32dp</dimen>
+    <dimen name="dp_34">34dp</dimen>
+    <dimen name="dp_35">35dp</dimen>
+    <dimen name="dp_36">36dp</dimen>
+    <dimen name="dp_37">37dp</dimen>
+    <dimen name="dp_38">38dp</dimen>
+    <dimen name="dp_40">40dp</dimen>
+    <dimen name="dp_42">42dp</dimen>
+    <dimen name="dp_44">44dp</dimen>
+    <dimen name="dp_45">45dp</dimen>
+    <dimen name="dp_48">48dp</dimen>
+    <dimen name="dp_49">49dp</dimen>
+    <dimen name="dp_50">50dp</dimen>
+    <dimen name="dp_55">55dp</dimen>
+    <dimen name="dp_56">56dp</dimen>
+    <dimen name="dp_57">57dp</dimen>
+    <dimen name="dp_58">58dp</dimen>
+    <dimen name="dp_60">60dp</dimen>
+    <dimen name="dp_64">64dp</dimen>
+    <dimen name="dp_65">65dp</dimen>
+    <dimen name="dp_70">70dp</dimen>
+    <dimen name="dp_74">74dp</dimen>
+    <dimen name="dp_75">75dp</dimen>
+    <dimen name="dp_80">80dp</dimen>
+    <dimen name="dp_88">88dp</dimen>
+    <dimen name="dp_90">90dp</dimen>
+    <dimen name="dp_95">95dp</dimen>
+    <dimen name="dp_96">96dp</dimen>
+    <dimen name="dp_100">100dp</dimen>
+    <dimen name="dp_110">110dp</dimen>
+    <dimen name="dp_112">112dp</dimen>
+    <dimen name="dp_120">120dp</dimen>
+    <dimen name="dp_129">129dp</dimen>
+    <dimen name="dp_137">137dp</dimen>
+    <dimen name="dp_141">141dp</dimen>
+    <dimen name="dp_145">145dp</dimen>
+    <dimen name="dp_150">150dp</dimen>
+    <dimen name="dp_160">160dp</dimen>
+    <dimen name="dp_165">165dp</dimen>
+    <dimen name="dp_167">167dp</dimen>
+    <dimen name="dp_170">170dp</dimen>
+    <dimen name="dp_185">185dp</dimen>
+    <dimen name="dp_200">200dp</dimen>
+    <dimen name="dp_210">210dp</dimen>
+    <dimen name="dp_230">230dp</dimen>
+    <dimen name="dp_250">250dp</dimen>
+    <dimen name="dp_270">250dp</dimen>
+    <dimen name="dp_300">300dp</dimen>
+    <dimen name="dp_330">330dp</dimen>
+    <dimen name="dp_340">340dp</dimen>
+    <dimen name="dp_350">350dp</dimen>
+    <dimen name="dp_360">360dp</dimen>
+    <dimen name="dp_362">362dp</dimen>
+    <dimen name="dp_370">370dp</dimen>
+    <dimen name="seal_userinfo_item_header_width">38dp</dimen>
+    <dimen name="seal_userinfo_item_header_height">38dp</dimen>
+    <dimen name="seal_userinfo_item_header_margin">14dp</dimen>
+    <dimen name="seal_userinfo_item_header_radius">3dp</dimen>
+    <dimen name="seal_userinfo_item_name_margin_left">14dp</dimen>
+    <dimen name="seal_userinfo_item_name_text_size">16dp</dimen>
+    <dimen name="seal_mine_user_height">48dp</dimen>
+
+    <dimen name="seal_search_item_devi_height">0.5dp</dimen>
+    <dimen name="seal_search_item_devi_">1dp</dimen>
+    <dimen name="seal_search_devi_color_margin_left">14dp</dimen>
+    <dimen name="seal_search_devi_color_margin_right">14dp</dimen>
+    <dimen name="seal_setting_item_def_height">48dp</dimen>
+    <dimen name="seal_user_detail_item_margin" tools:ignore="MissingDefaultResource">20dp</dimen>
+    <dimen name="seal_user_detail_userinfo_height">80dp</dimen>
+    <dimen name="seal_user_detail_userinfo_portrait_value">64dp</dimen>
+    <dimen name="seal_user_detail_userinfo_portrait_margin_left">14dp</dimen>
+    <dimen name="seal_user_detail_userinfo_portrait_margin">10dp</dimen>
+    <dimen name="seal_user_detail_userinfo_portrait_radius">3dp</dimen>
+    <dimen name="seal_user_detail_userinfo_margin_left">14dp</dimen>
+    <dimen name="seal_user_detail_userinfo_margin_right">20dp</dimen>
+    <dimen name="seal_user_detail_userinfo_display_name">16dp</dimen>
+    <dimen name="seal_user_detail_userinfo_text_margin">2dp</dimen>
+    <dimen name="seal_user_detail_userinfo_text_size">14dp</dimen>
+    <dimen name="seal_new_friend_header_radius">3dp</dimen>
+    <dimen name="seal_search_item_title_height">40dp</dimen>
+    <dimen name="seal_search_item_title_padding_left">14dp</dimen>
+    <dimen name="seal_search_item_div_height">14dp</dimen>
+    <dimen name="seal_search_item_title_text_size">14sp</dimen>
+    <dimen name="seal_search_item_portrait_radius">3dp</dimen>
+
+    <dimen name="find_dp_1">1dp</dimen>
+    <dimen name="find_dp_35">35dp</dimen>
+
+    <dimen name="find_sp_11">11sp</dimen>
+    <dimen name="find_sp_12">12sp</dimen>
+    <dimen name="find_sp_14">14sp</dimen>
+    <dimen name="find_sp_18">18sp</dimen>
+    <dimen name="find_sp_16">16sp</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+
+
+
+    <dimen name="line_height">1px</dimen>
+
+    <dimen name="input_text_size">16dp</dimen>
+    <dimen name="press_to_speak_text_size">15sp</dimen>
+
+    <!--消息-->
+    <dimen name="message_avatar_size">38dp</dimen><!--消息头像尺寸-->
+    <dimen name="message_avatar_official_flag_size">12dp</dimen>
+
+
+    <dimen name="message_nick_name_text_size">12sp</dimen><!--消息昵称字体大小-->
+    <dimen name="message_text_msg_text_size">15sp</dimen><!--文本消息字体大小-->
+    <dimen name="message_time_text_size">12sp</dimen><!--时间字体大小-->
+    <dimen name="message_recall_text_size">13sp</dimen><!--撤回消息字体大小-->
+    <dimen name="message_system_text_size">13sp</dimen><!--系统消息字体大小-->
+    <dimen name="message_time_margin">12dp</dimen><!--消息回复字体大小-->
+    <dimen name="message_msg_check_size">19dp</dimen><!--消息复选框尺寸-->
+    <dimen name="message_msg_official_size">10sp</dimen><!--消息复选框尺寸-->
+    <dimen name="message_content_max_width">231dp</dimen>
+    <dimen name="message_content_text_max_width">220dp</dimen>
+
+    <dimen name="message_description_text_size">12sp</dimen>
+    <dimen name="message_answer_margin_top">3dp</dimen>
+    <dimen name="message_answer_padding_top">5dp</dimen>
+    <dimen name="message_answer_padding_left">11dp</dimen>
+
+    <dimen name="message_status_failed_size">161dp</dimen>
+
+    <!--边距-->
+    <dimen name="message_avatar_margin">8dp</dimen><!--消息头像尺寸-->
+    <dimen name="message_avatar_gone_margin">10dp</dimen><!--消息头像尺寸-->
+    <dimen name="message_nick_name_margin">6dp</dimen><!--昵称边距-->
+    <dimen name="message_content_top_margin">2dp</dimen><!--content layout顶部边距-->
+
+    <!--消息内容尺寸-->
+
+    <dimen name="message_content_size_audio">38dp</dimen><!--语音消息高度-->
+    <dimen name="message_content_size_image_equal">120dp</dimen><!--图像消息：宽=高-->
+    <dimen name="message_content_size_image_width">90dp</dimen><!--图像消息：宽<高-->
+    <dimen name="message_content_size_image_height">165dp</dimen><!--图像消息：宽>高-->
+    <dimen name="message_content_size_geo_width">230dp</dimen><!--地图消息宽-->
+    <dimen name="message_content_size_geo_height">100dp</dimen><!--地图消息高-->
+
+    <dimen name="message_content_size_file_width">230dp</dimen><!--文件消息宽-->
+    <dimen name="message_content_size_file_height">60dp</dimen><!--文件消息高-->
+
+    <dimen name="message_content_size_record_width">240dp</dimen><!--聊天记录合并转发消息宽-->
+    <dimen name="message_content_size_record_height">108dp</dimen><!--聊天记录合并转发消息高-->
+    <dimen name="message_content_size_record_text_size">10sp</dimen><!--聊天记录合并转发消息内容字体大小-->
+
+    <dimen name="name_msg_multiple_operation_size">28dp</dimen>
+    <dimen name="name_msg_geo_title">15dp</dimen>
+    <dimen name="name_msg_geo_address">10dp</dimen>
+
+
+    <dimen name="navi_height">37dp</dimen>
+    <dimen name="navi_back_width">50dp</dimen>
+    <dimen name="inner_frame_layout_padding">5dp</dimen>
+
+    <dimen name="chat_input_bar_icon_size">24dp</dimen>
+    <dimen name="chat_input_edit_text_height">37dp</dimen>
+    <dimen name="chat_bottom_add_panel_button_size">56dp</dimen>
+    <dimen name="chat_bottom_send_text_size">15dp</dimen>
+    <dimen name="chat_bottom_add_panel_text_size">10dp</dimen>
+    <dimen name="chat_bottom_add_panel_padding">23dp</dimen>
+</resources>
