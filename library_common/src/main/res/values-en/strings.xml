@@ -2993,6 +2993,7 @@ Do you have a doctor\'s consultation, treatment, medication or hospitalization f
         <item>9,%1$shas been removed taboo</item>
         <item>10,this group has been banned</item>
         <item>11,this group has lifted the ban</item>
+        <item>12,Removed from group chat</item>
     </string-array>
 
     <string-array name="qx_day">

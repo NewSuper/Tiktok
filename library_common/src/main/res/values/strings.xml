@@ -132,6 +132,7 @@
         <item>9,%1$s已被移除禁言</item>
         <item>10,该群已开启禁言</item>
         <item>11,该群已解除禁言</item>
+        <item>12,被移除了群聊</item>
     </string-array>
 
     <string-array name="qx_day">
