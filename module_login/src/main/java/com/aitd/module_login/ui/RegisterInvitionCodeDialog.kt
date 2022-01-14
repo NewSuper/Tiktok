@@ -141,7 +141,7 @@ class RegisterInvitionCodeDialog(
                         if (verificationInviteBean != null) {
                             binding.confirm.text =
                                 mContext.getString(R.string.invitation_code_sure_change);
-                            binding.clNewInfo.setBackgroundResource(R.drawable.common_shape_ebf2fe_5dp);
+                            binding.clNewInfo.setBackgroundResource(R.drawable.shape_ebf2fe_5dp);
                             binding.txtReplaceTips.visible()
                         } else {
                             binding.confirm.text = mContext.getString(R.string.sure);

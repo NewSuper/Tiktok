@@ -44,7 +44,7 @@
             android:layout_marginLeft="46dp"
             android:layout_marginTop="48dp"
             android:layout_marginRight="46dp"
-            android:divider="@drawable/common_bg_divider"
+            android:divider="@drawable/shape_ddd_1dp"
             android:orientation="vertical"
             android:showDividers="middle|end">
 
@@ -74,7 +74,7 @@
                         android:id="@+id/txt_sex_man"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/common_blue_radiu_14"
+                        android:background="@drawable/shape_5083fc_14dp"
                         android:gravity="right"
                         android:onClick="viewOnclick"
                         android:paddingLeft="22dp"
@@ -178,7 +178,7 @@
             android:layout_marginLeft="46dp"
             android:layout_marginTop="100dp"
             android:layout_marginRight="46dp"
-            android:background="@drawable/login_dl_select_blue_per_nor"
+            android:background="@drawable/selector_blue"
             android:enabled="false"
             android:gravity="center"
             android:onClick="viewOnclick"

@@ -66,7 +66,7 @@
                             android:maxLength="20"
                             android:textColor="#333333"
                             android:textColorHint="#CCCCCC"
-                            android:textCursorDrawable="@drawable/login_text_cursor_drawable"
+                            android:textCursorDrawable="@drawable/shape_87aaff_2dp"
                             android:textSize="15sp" />
                     </com.aitd.module_login.widget.FloatLabeledEditText>
                 </LinearLayout>
@@ -202,7 +202,7 @@
                         android:layout_marginTop="9dp"
                         android:button="@null"
                         android:checked="false"
-                        android:drawableLeft="@drawable/login_checkbox_password_eye" />
+                        android:drawableLeft="@drawable/selector_eyes" />
                 </LinearLayout>
 
                 <View
@@ -378,7 +378,7 @@
                         android:layout_marginTop="9dp"
                         android:button="@null"
                         android:checked="false"
-                        android:drawableLeft="@drawable/login_checkbox_password_eye" />
+                        android:drawableLeft="@drawable/selector_eyes" />
                 </LinearLayout>
 
                 <View
@@ -416,7 +416,7 @@
                     android:layout_marginTop="84dp"
                     android:layout_marginRight="30dp"
                     android:layout_marginBottom="20dp"
-                    android:background="@drawable/login_dl_select_blue_per_nor"
+                    android:background="@drawable/selector_blue"
                     android:enabled="false"
                     android:gravity="center"
                     android:text="@string/sure"

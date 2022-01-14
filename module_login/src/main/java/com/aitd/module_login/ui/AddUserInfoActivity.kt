@@ -1,11 +1,9 @@
 package com.aitd.module_login.ui
 
 import android.Manifest
-import android.app.Activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.provider.MediaStore
 import android.text.Editable
 import android.text.TextUtils
 import android.view.View
@@ -13,7 +11,6 @@ import androidx.core.content.ContextCompat
 import com.aitd.library_common.app.BaseApplication
 import com.aitd.library_common.base.BaseMvvmActivity
 import com.aitd.library_common.data.UserResponse
-import com.aitd.library_common.dialog.CommonBottomDialog
 import com.aitd.library_common.dialog.SelectImgeFragment
 import com.aitd.library_common.imageload.ImageLoader
 import com.aitd.library_common.language.LanguageSpUtil
@@ -29,9 +26,6 @@ import com.aitd.module_login.vm.LoginViewModel
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.launcher.ARouter
 import com.blankj.utilcode.util.PermissionUtils
-import com.blankj.utilcode.util.ToastUtils
-import com.chad.library.adapter.base.listener.OnItemClickListener
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.*
 import setTextString
 import java.util.*
@@ -235,7 +229,7 @@ class AddUserInfoActivity : BaseMvvmActivity<LoginViewModel, LoginActivityAddUse
             ) else ContextCompat.getColor(this@AddUserInfoActivity, R.color.common_text_gray_66)
         )
         mBinding.txtSexMan.setBackgroundResource(
-            if (userData.gender.equals("1")) R.drawable.common_blue_radiu_14 else 0
+            if (userData.gender.equals("1")) R.drawable.shape_5083fc_14dp else 0
         )
         mBinding.txtSexWoman.setTextColor(
             if (userData.gender.equals("1")) ContextCompat.getColor(
@@ -244,7 +238,7 @@ class AddUserInfoActivity : BaseMvvmActivity<LoginViewModel, LoginActivityAddUse
             ) else ContextCompat.getColor(this@AddUserInfoActivity, R.color.common_white)
         )
         mBinding.txtSexWoman.setBackgroundResource(
-            if (userData.gender.equals("1")) 0 else R.drawable.common_blue_radiu_14
+            if (userData.gender.equals("1")) 0 else R.drawable.shape_5083fc_14dp
         )
     }
 }

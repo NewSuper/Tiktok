@@ -7,13 +7,6 @@ import com.netease.nis.captcha.Captcha;
 import com.netease.nis.captcha.CaptchaConfiguration;
 import com.netease.nis.captcha.CaptchaListener;
 
-/**
- * Author: palmer
- * time: 2020/12/16
- * email:lxlfpeng@163.com
- * desc:
- */
-
 public class NoSenseCaptchaUtils {
     public static final String NOSENSECAPTCHAID = "06c4873f4bbe412a92a75ccf44be83d7";//网易图形验证码获取ID
 

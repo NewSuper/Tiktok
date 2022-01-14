@@ -29,7 +29,7 @@ import com.aitd.library_common.utils.UniversalID
 import com.aitd.module_login.R
 import com.aitd.module_login.bean.VerificationInviteBean
 import com.aitd.module_login.databinding.LoginActivityRegisterBinding
-import com.aitd.module_login.utils.LoginRegexUtils
+import com.aitd.library_common.utils.RegexCheckUtils
 import com.aitd.module_login.utils.NoSenseCaptchaUtils
 import com.aitd.module_login.vm.LoginViewModel
 import com.alibaba.android.arouter.facade.annotation.Route
@@ -95,7 +95,7 @@ class RegisterActivity : BaseMvvmActivity<LoginViewModel, LoginActivityRegisterB
                 if (!TextUtils.isEmpty(s.toString().trim())) {
                     mBinding.imgRegSetPwdClose.visible()
                     checksShow(mPwd)
-                    if (LoginRegexUtils.isCheckPwd(mPwd)) {
+                    if (RegexCheckUtils.isCheckPwd(mPwd)) {
                         mBinding.lyRegPwdShow.gone()
                     } else {
                         mBinding.lyRegPwdShow.visible()
@@ -201,7 +201,7 @@ class RegisterActivity : BaseMvvmActivity<LoginViewModel, LoginActivityRegisterB
             mBinding.tvRegistSubmit.isEnabled = false
             return
         }
-        if (TextUtils.isEmpty(mPwd) || !LoginRegexUtils.isCheckPwd(mPwd)) {
+        if (TextUtils.isEmpty(mPwd) || !RegexCheckUtils.isCheckPwd(mPwd)) {
             mBinding.tvRegistSubmit.isEnabled = false
             return
         }
@@ -222,17 +222,17 @@ class RegisterActivity : BaseMvvmActivity<LoginViewModel, LoginActivityRegisterB
      * @param text
      */
     private fun checksShow(text: String) {
-        if (LoginRegexUtils.isDigitBig(text)) {
+        if (RegexCheckUtils.isDigitBig(text)) {
             setHitShow(mBinding.imgMatcherContainsOne, mBinding.tvMatcherContainsOne, 1)
         } else {
             setHitShow(mBinding.imgMatcherContainsOne, mBinding.tvMatcherContainsOne, 0)
         }
-        if (LoginRegexUtils.isDigitSmall(text)) {
+        if (RegexCheckUtils.isDigitSmall(text)) {
             setHitShow(mBinding.imgMatcherContainsTwo, mBinding.tvMatcherContainsTwo, 1)
         } else {
             setHitShow(mBinding.imgMatcherContainsTwo, mBinding.tvMatcherContainsTwo, 0)
         }
-        if (LoginRegexUtils.isDigit(text)) {
+        if (RegexCheckUtils.isDigit(text)) {
             setHitShow(mBinding.imgMatcherContainsThree, mBinding.tvMatcherContainsThree, 1)
         } else {
             setHitShow(mBinding.imgMatcherContainsThree, mBinding.tvMatcherContainsThree, 0)
@@ -403,7 +403,7 @@ class RegisterActivity : BaseMvvmActivity<LoginViewModel, LoginActivityRegisterB
                 ToastUtils.showShort(getString(R.string.phone_not_null1))
                 return
             }
-            if (LoginRegexUtils.judgeContainsStr(mMobile)) {
+            if (RegexCheckUtils.judgeContainsStr(mMobile)) {
                 ToastUtils.showShort(getString(R.string.phone_format_error))
                 return
             }
@@ -412,7 +412,7 @@ class RegisterActivity : BaseMvvmActivity<LoginViewModel, LoginActivityRegisterB
                 ToastUtils.showShort(getString(R.string.email_not_null))
                 return
             }
-            if (!LoginRegexUtils.isEmail(mEmial)) {
+            if (!RegexCheckUtils.isEmail(mEmial)) {
                 ToastUtils.showShort(getString(R.string.email_format_error))
                 return
             }

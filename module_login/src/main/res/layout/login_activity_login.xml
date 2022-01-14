@@ -152,7 +152,7 @@
                                     android:maxLength="30"
                                     android:textColor="@color/common_black"
                                     android:textColorHint="#CCCCCC"
-                                    android:textCursorDrawable="@drawable/login_text_cursor_drawable"
+                                    android:textCursorDrawable="@drawable/shape_87aaff_2dp"
                                     android:textSize="15sp" />
                             </com.aitd.module_login.widget.FloatLabeledEditText>
 
@@ -212,7 +212,7 @@
                                         android:maxLength="20"
                                         android:textColor="@color/common_black"
                                         android:textColorHint="#CCCCCC"
-                                        android:textCursorDrawable="@drawable/login_text_cursor_drawable"
+                                        android:textCursorDrawable="@drawable/shape_87aaff_2dp"
                                         android:textSize="15sp" />
                                 </com.aitd.module_login.widget.FloatLabeledEditText>
                             </LinearLayout>
@@ -236,7 +236,7 @@
                                 android:layout_marginLeft="@dimen/dp_10"
                                 android:layout_marginBottom="2dp"
                                 android:button="@null"
-                                android:drawableLeft="@drawable/login_checkbox_password_eye" />
+                                android:drawableLeft="@drawable/selector_eyes" />
                         </LinearLayout>
 
                         <View
@@ -289,7 +289,7 @@
                         android:layout_marginLeft="30dp"
                         android:layout_marginTop="12dp"
                         android:layout_marginRight="30dp"
-                        android:background="@drawable/login_dl_select_blue_per_nor"
+                        android:background="@drawable/selector_blue"
                         android:enabled="true"
                         android:gravity="center"
                         android:onClick="viewClick"
@@ -305,7 +305,7 @@
                         android:layout_marginLeft="30dp"
                         android:layout_marginTop="56dp"
                         android:layout_marginRight="30dp"
-                        android:background="@drawable/login_dl_select_blue_per_nor"
+                        android:background="@drawable/selector_blue"
                         android:enabled="false"
                         android:gravity="center"
                         android:onClick="viewClick"
@@ -320,7 +320,7 @@
                         android:layout_marginLeft="30dp"
                         android:layout_marginTop="15dp"
                         android:layout_marginRight="30dp"
-                        android:background="@drawable/login_dl_bg_blue_radiu_white"
+                        android:background="@drawable/shape_blue_stroke1_white_4dp"
                         android:gravity="center"
                         android:onClick="viewClick"
                         android:text="@string/dl_swipe_face_login"

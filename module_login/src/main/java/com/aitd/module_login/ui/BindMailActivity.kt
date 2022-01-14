@@ -14,12 +14,11 @@ import com.aitd.library_common.base.BaseMvvmActivity
 import com.aitd.library_common.extend.gone
 import com.aitd.library_common.extend.visible
 import com.aitd.library_common.router.ARouterUrl
-import com.aitd.library_common.utils.PreferenceUtils
 import com.aitd.library_common.utils.SimpleTextWatcher
 import com.aitd.library_common.utils.UniversalID
 import com.aitd.module_login.R
 import com.aitd.module_login.databinding.LoginActivityBindMailBinding
-import com.aitd.module_login.utils.LoginRegexUtils
+import com.aitd.library_common.utils.RegexCheckUtils
 import com.aitd.module_login.vm.LoginViewModel
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.google.gson.Gson
@@ -48,7 +47,7 @@ class BindMailActivity : BaseMvvmActivity<LoginViewModel, LoginActivityBindMailB
                 isEnabled = false
                 if (!TextUtils.isEmpty(s.toString().trim { it <= ' ' })) {
                     mBinding.imgBindEmailClose.visible()
-                    if (TextUtils.isEmpty(mEmail) || !LoginRegexUtils.isEmail(mEmail.trim { it <= ' ' })) {
+                    if (TextUtils.isEmpty(mEmail) || !RegexCheckUtils.isEmail(mEmail.trim { it <= ' ' })) {
                     } else {
                         isEnabled = true
                     }
@@ -237,7 +236,7 @@ class BindMailActivity : BaseMvvmActivity<LoginViewModel, LoginActivityBindMailB
                 }
             }
         }
-        if (TextUtils.isEmpty(mEmail) || !LoginRegexUtils.isEmail(mEmail.trim { it <= ' ' })) {
+        if (TextUtils.isEmpty(mEmail) || !RegexCheckUtils.isEmail(mEmail.trim { it <= ' ' })) {
             mBinding.tvMatcherContainsEmail.text = getString(R.string.email_format_error)
             mBinding.lyBindEmailErrorShow.visible()
         } else {

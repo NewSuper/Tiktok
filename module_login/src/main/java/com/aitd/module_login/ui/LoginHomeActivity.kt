@@ -25,7 +25,7 @@ import com.aitd.library_common.utils.UniversalID
 import com.aitd.module_login.R
 import com.aitd.module_login.bean.LoginFaceRequest
 import com.aitd.module_login.databinding.LoginActivityLoginBinding
-import com.aitd.module_login.utils.LoginRegexUtils
+import com.aitd.library_common.utils.RegexCheckUtils
 import com.aitd.module_login.utils.LoginResultHelper
 import com.aitd.module_login.utils.NoSenseCaptchaUtils
 import com.aitd.library_common.utils.SimpleTextWatcher
@@ -342,7 +342,7 @@ class LoginHomeActivity : BaseMvvmActivity<LoginViewModel, LoginActivityLoginBin
     private fun checkLogin() {
         val status = mMobileOrEmail.contains("@")
         if (status) {
-            if (!LoginRegexUtils.isEmail(mMobileOrEmail.trim { it <= ' ' })) {
+            if (!RegexCheckUtils.isEmail(mMobileOrEmail.trim { it <= ' ' })) {
                 ToastUtils.showShort(getString(R.string.email_format_error))
                 return
             }

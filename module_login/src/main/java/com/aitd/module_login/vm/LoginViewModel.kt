@@ -19,7 +19,7 @@ import com.aitd.module_login.bean.CheckEmailBean
 import com.aitd.module_login.bean.LoginFaceRequest
 import com.aitd.module_login.bean.VerificationInviteBean
 import com.aitd.module_login.net.NetLoginProvider
-import com.aitd.module_login.utils.Base64ImageUtil
+import com.aitd.library_common.utils.Base64ImageUtil
 import com.blankj.utilcode.util.LogUtils
 import com.blankj.utilcode.util.StringUtils
 import com.blankj.utilcode.util.ToastUtils

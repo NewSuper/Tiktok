@@ -17,7 +17,7 @@ import com.aitd.library_common.extend.visible
 import com.aitd.library_common.router.ARouterUrl
 import com.aitd.module_login.R
 import com.aitd.module_login.databinding.LoginActivityFindPwdBinding
-import com.aitd.module_login.utils.LoginRegexUtils
+import com.aitd.library_common.utils.RegexCheckUtils
 import com.aitd.library_common.utils.SimpleTextWatcher
 import com.aitd.library_common.alias.hidePassword
 import com.aitd.library_common.alias.showPassword
@@ -68,7 +68,7 @@ class FindPwdActivity : BaseMvvmActivity<LoginViewModel, LoginActivityFindPwdBin
                 if (!TextUtils.isEmpty(s.toString().trim { it <= ' ' })) {
                     mBinding.imgFpSetPwdClose.visible()
                     checksShow(password)
-                    if (LoginRegexUtils.isCheckPwd(password)) {
+                    if (RegexCheckUtils.isCheckPwd(password)) {
                         mBinding.lyForgetPwdShow.gone()
                     } else {
                         mBinding.lyForgetPwdShow.visible()
@@ -149,17 +149,17 @@ class FindPwdActivity : BaseMvvmActivity<LoginViewModel, LoginActivityFindPwdBin
      * @param text
      */
     private fun checksShow(text: String) {
-        if (LoginRegexUtils.isDigitBig(text)) {
+        if (RegexCheckUtils.isDigitBig(text)) {
             setHitShow(mBinding.imgMatcherContainsOne, mBinding.tvMatcherContainsOne, 1)
         } else {
             setHitShow(mBinding.imgMatcherContainsOne, mBinding.tvMatcherContainsOne, 0)
         }
-        if (LoginRegexUtils.isDigitSmall(text)) {
+        if (RegexCheckUtils.isDigitSmall(text)) {
             setHitShow(mBinding.imgMatcherContainsTwo, mBinding.tvMatcherContainsTwo, 1)
         } else {
             setHitShow(mBinding.imgMatcherContainsTwo, mBinding.tvMatcherContainsTwo, 0)
         }
-        if (LoginRegexUtils.isDigit(text)) {
+        if (RegexCheckUtils.isDigit(text)) {
             setHitShow(mBinding.imgMatcherContainsThree, mBinding.tvMatcherContainsThree, 1)
         } else {
             setHitShow(mBinding.imgMatcherContainsThree, mBinding.tvMatcherContainsThree, 0)
@@ -187,7 +187,7 @@ class FindPwdActivity : BaseMvvmActivity<LoginViewModel, LoginActivityFindPwdBin
             mBinding.tvFpSureSubmit.isEnabled = false
             return
         }
-        if (TextUtils.isEmpty(password) || !LoginRegexUtils.isCheckPwd(password)) {
+        if (TextUtils.isEmpty(password) || !RegexCheckUtils.isCheckPwd(password)) {
             mBinding.tvFpSureSubmit.isEnabled = false
             return
         }
@@ -226,7 +226,7 @@ class FindPwdActivity : BaseMvvmActivity<LoginViewModel, LoginActivityFindPwdBin
     }
 
     private fun subimitforgetPwd() {
-        if (isCheckPwdEquals() && LoginRegexUtils.isCheckPwd(password)) {
+        if (isCheckPwdEquals() && RegexCheckUtils.isCheckPwd(password)) {
             mViewModel.modifyPwd(userName, password, code)
         }
     }
@@ -251,12 +251,12 @@ class FindPwdActivity : BaseMvvmActivity<LoginViewModel, LoginActivityFindPwdBin
         val isEmail = userName.contains("@")
         var isBack = true
         if (!isEmail) {
-            if (LoginRegexUtils.judgeContainsStr(userName)) {
+            if (RegexCheckUtils.judgeContainsStr(userName)) {
                 ToastUtils.showShort(getString(R.string.phone_format_error))
                 isBack = false
             }
         } else {
-            if (!LoginRegexUtils.isEmail(userName)) {
+            if (!RegexCheckUtils.isEmail(userName)) {
                 ToastUtils.showShort(getString(R.string.email_format_error))
                 isBack = false
             }

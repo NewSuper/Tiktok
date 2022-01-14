@@ -224,7 +224,7 @@
                     android:layout_marginTop="@dimen/dp_10"
                     android:button="@null"
                     android:checked="false"
-                    android:drawableLeft="@drawable/login_checkbox_password_eye" />
+                    android:drawableLeft="@drawable/selector_eyes" />
             </LinearLayout>
 
             <View
@@ -262,7 +262,7 @@
             android:layout_marginTop="12dp"
             android:layout_marginRight="30dp"
             android:layout_marginBottom="136dp"
-            android:background="@drawable/login_dl_select_blue_per_nor"
+            android:background="@drawable/selector_blue"
             android:enabled="false"
             android:gravity="center"
             android:onClick="viewOnclick"

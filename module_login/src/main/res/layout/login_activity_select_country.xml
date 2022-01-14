@@ -20,7 +20,7 @@
             android:layout_height="35dp"
             android:layout_marginLeft="17dp"
             android:layout_marginRight="17dp"
-            android:background="@drawable/common_bg_search_bar"
+            android:background="@drawable/shape_black_10dp"
             android:gravity="center">
 
             <com.aitd.library_common.widget.IconTextView
