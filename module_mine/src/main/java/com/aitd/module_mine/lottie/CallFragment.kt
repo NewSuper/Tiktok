@@ -17,7 +17,7 @@ class CallFragment : BaseFragment() {
     private var mWebPageFragment: WebFragment? = null
 
     private var src = arrayOf("商铺", "项目", "名片", "导航", "网页")
-    private val order = intArrayOf(R.mipmap.shangpu, R.mipmap.xiangmu, R.mipmap.mingpian, R.mipmap.daohang, R.mipmap.wangye)
+    private val order = intArrayOf(R.mipmap.roulette_shop, R.mipmap.roulette_project, R.mipmap.roulette_business_card, R.mipmap.roulette_daohang, R.mipmap.roulette_webpage)
 
     override fun init(saveInstanceState: Bundle?) {
         ScreenUtils.initScreen(mActivity)  // 自定义view   163行 Bitmap.createBitmap  需要初始化宽高

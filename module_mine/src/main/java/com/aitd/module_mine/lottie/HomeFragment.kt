@@ -62,7 +62,7 @@ class HomeFragment : BaseFragment() {
         videoConnectChildList.add(
             ChildBean(
                 "仿京东金融的数值滚动尺",
-                R.mipmap.daohang,
+                R.mipmap.roulette_daohang,
                 1,
                 TestActivity::class.java
             )
@@ -70,7 +70,7 @@ class HomeFragment : BaseFragment() {
         videoConnectChildList.add(
             ChildBean(
                 "仿京",
-                R.mipmap.daohang,
+                R.mipmap.roulette_daohang,
                 1,
                 TestActivity::class.java
             )

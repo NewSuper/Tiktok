@@ -45,8 +45,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    app:icon_normal="@mipmap/top_nor"
-                    app:lottie_path="vmai.json"
+                    app:icon_normal="@mipmap/roulette_home_unselect"
+                    app:lottie_path="lottie_vmai.json"
                     app:tab_name="首页"
                     app:tab_selected="true"
                     app:text_normal_color="@color/color_9"
@@ -72,8 +72,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        app:icon_normal="@mipmap/msg_nor"
-                        app:lottie_path="message.json"
+                        app:icon_normal="@mipmap/roulette_msg_unselect"
+                        app:lottie_path="lottie_message.json"
                         app:tab_name="@string/tab_msg"
                         app:tab_selected="false"
                         app:text_normal_color="@color/color_9"
@@ -97,7 +97,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:src="@mipmap/phone" />
+                    android:src="@mipmap/roulette_phone" />
 
             </LinearLayout>
 
@@ -114,8 +114,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    app:icon_normal="@mipmap/find_nor"
-                    app:lottie_path="discover.json"
+                    app:icon_normal="@mipmap/roulette_find_unselect"
+                    app:lottie_path="lottie_discover.json"
                     app:tab_name="@string/tab_find"
                     app:tab_selected="false"
                     app:text_normal_color="@color/color_9"
@@ -137,8 +137,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    app:icon_normal="@mipmap/mine_nor"
-                    app:lottie_path="mine.json"
+                    app:icon_normal="@mipmap/roulette_mine_unselect"
+                    app:lottie_path="lottie_mine.json"
                     app:tab_name="@string/tab_mine"
                     app:tab_selected="false"
                     app:text_normal_color="@color/color_9"

@@ -26,7 +26,7 @@ import java.util.List;
 public class SlidingArcView extends ViewGroup {
     public static String TAG = "QTView";
     private String titles[] = {"商铺", "项目", "名片", "导航", "网页"};
-    private int src[] = {R.mipmap.shangpu, R.mipmap.xiangmu, R.mipmap.mingpian, R.mipmap.daohang, R.mipmap.wangye};
+    private int src[] = {R.mipmap.roulette_shop, R.mipmap.roulette_project, R.mipmap.roulette_business_card, R.mipmap.roulette_daohang, R.mipmap.roulette_webpage};
     private List<SignView> views = new ArrayList<>();
     private Bitmap chooseBit;
     int mSize;
@@ -90,7 +90,7 @@ public class SlidingArcView extends ViewGroup {
     }
 
     private void init() {
-        chooseBit = ((BitmapDrawable) getResources().getDrawable(R.mipmap.choose)).getBitmap();
+        chooseBit = ((BitmapDrawable) getResources().getDrawable(R.mipmap.roulette_choose)).getBitmap();
         CentX = ScreenUtils.getScreenW() / 2;
         CentY = ScreenUtils.getScreenW() / 2 + viewTopChange + ScreenUtils.dp2px(150);
         RADIUS = ScreenUtils.getScreenW() / 2 + ScreenUtils.dp2px(115);
