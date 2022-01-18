@@ -48,7 +48,7 @@ class ChatImageTextMessageHandler : ChatBaseMessageHandler() {
 
     private fun getResource(tag :String): Int {
         var resId = mIconMap[tag.toLowerCase()]
-        return resId ?: R.drawable.imui_ic_file_unkown
+        return resId ?: R.drawable.vector_file_unkown
     }
 
     private fun getTypeName(tag :String): Int {
@@ -58,13 +58,13 @@ class ChatImageTextMessageHandler : ChatBaseMessageHandler() {
 
     init {
         //社区
-        mIconMap["0"] = R.drawable.imui_ic_image_text_activity
+        mIconMap["0"] = R.drawable.vector_shequ
         //动态
-        mIconMap["1"] = R.drawable.imui_ic_image_text_activity
+        mIconMap["1"] = R.drawable.vector_shequ
         //直播
-        mIconMap["2"] = R.drawable.imui_ic_image_text_live
+        mIconMap["2"] = R.drawable.vector_live
         //推荐
-        mIconMap["3"] = R.drawable.imui_ic_image_text_recommend
+        mIconMap["3"] = R.drawable.vector_recommend
 
         mTypeMap["0"] = R.string.qx_image_text_type_social
         mTypeMap["1"] = R.string.qx_image_text_type_activity

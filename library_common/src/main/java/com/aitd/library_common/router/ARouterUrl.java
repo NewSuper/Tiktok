@@ -1,13 +1,11 @@
 package com.aitd.library_common.router;
 
-
 /**
  * Author : palmer
  * Date   : 2021/6/8
  * E-Mail : lxlfpeng@163.com
  * Desc   : Activity路由，常量命名规范：ROUTE_+模块名+Activity名
  */
-
 public class ARouterUrl {
     public static class Main {
         public static final String ROUTE_MAIN_ACTIVITY = "/module_main/MainActivity";
@@ -30,9 +28,9 @@ public class ARouterUrl {
     }
 
     public static class Chat {
-        public static final String ROUTE_CHAT_ACTIVITY = "/module_chat/ChatHomeActivity";
-        public static final String ROUTE_CHAT_FRAGMENT = "/module_chat/ChatHomeFragment";
-        public static final String ROUTE_CONVERSATION_ACTIVITY = "/module_chat/ConversationActivity";
+        public static final String ROUTE_CHAT_ACTIVITY = "/module_chat/ui/ChatHomeActivity";
+        public static final String ROUTE_CHAT_FRAGMENT = "/module_chat/ui/ChatHomeFragment";
+
     }
 
     public static class Wealth {

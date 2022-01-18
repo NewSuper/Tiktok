@@ -27,8 +27,8 @@ class AesKeyHandler : BaseCmdHandler() {
 
     private fun createAuthMessage()  : S2CSndMessage {
         val deviceNo: String = UserInfoCache.getToken() + System.currentTimeMillis()
-        var systemVersion = SystemUtil.getSystemVersion()
-        var deviceCode = SystemUtil.getDeviceBrand()
+        var systemVersion = SystemUtil.systemVersion
+        var deviceCode = SystemUtil.deviceBrand
         val auth = C2SAuth.Auth.newBuilder()
             .setAppId(UserInfoCache.appKey)
             .setToken(UserInfoCache.getToken()).setDeviceNo(deviceNo).setDeviceType("1").setDeviceCode(

@@ -19,7 +19,8 @@ public class HeartBeatHolder {
      * 超出指定时间无tcp通信则认定需要发送心跳包
      * TODO 先按60s检测一次，后续再优化
      */
-    public final long EXP_TIME = 60000;
+   // public final long EXP_TIME = 60000;
+    public final long EXP_TIME = 20000;  //修改心跳时长
     /**
      * 记录tcp通信的最新一次时间
      */

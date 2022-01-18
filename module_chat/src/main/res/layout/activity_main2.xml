@@ -1,17 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-    <TextView
-        android:id="@+id/tv_title_bar_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
-        android:text="MAIN"
-        android:textSize="30dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/fly_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_conversation"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line"
+        app:layout_constraintTop_toBottomOf="@id/fly_fragment_container" />
+
+    <TextView
+        android:id="@+id/btn_conversation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/imui_selector_tab_conversation"
+        android:gravity="center_horizontal"
+        android:onClick="onConversation"
+        android:padding="20dp"
+        android:text="@string/main_conversation"
+        android:textColor="@drawable/imui_selector_tab_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btn_friend" />
+
+    <TextView
+        android:id="@+id/btn_friend"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/imui_selector_tab_friend"
+        android:gravity="center_horizontal"
+        android:onClick="onFriendClick"
+        android:padding="20dp"
+        android:text="@string/main_friend"
+        android:textColor="@drawable/imui_selector_tab_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@id/btn_conversation"
+        app:layout_constraintRight_toRightOf="parent" />
+<!--    <TextView-->
+<!--        android:id="@+id/btn_friend"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:drawableTop="@drawable/imui_selector_tab_friend"-->
+<!--        android:gravity="center_horizontal"-->
+<!--        android:onClick="onFriendClick"-->
+<!--        android:padding="20dp"-->
+<!--        android:text="@string/main_friend"-->
+<!--        android:textColor="@drawable/imui_selector_tab_text"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintHorizontal_weight="1"-->
+<!--        app:layout_constraintLeft_toRightOf="@id/btn_conversation"-->
+<!--        app:layout_constraintRight_toLeftOf="@id/btn_mine" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/btn_mine"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:drawableTop="@drawable/imui_selector_tab_mine"-->
+<!--        android:gravity="center_horizontal"-->
+<!--        android:onClick="onMineClick"-->
+<!--        android:padding="20dp"-->
+<!--        android:text="@string/main_mine"-->
+<!--        android:textColor="@drawable/imui_selector_tab_text"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintHorizontal_weight="1"-->
+<!--        app:layout_constraintLeft_toRightOf="@id/btn_friend"-->
+<!--        app:layout_constraintRight_toRightOf="parent" />-->
 </androidx.constraintlayout.widget.ConstraintLayout>

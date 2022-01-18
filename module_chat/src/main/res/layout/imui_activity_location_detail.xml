@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/navi_height">
+
+        <ImageView
+            android:id="@+id/tvBack"
+            android:layout_width="@dimen/navi_back_width"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:scaleType="centerInside"
+            android:src="@drawable/imui_icon_back" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:text="@string/qx_geo_infomation"
+            android:textColor="@color/color_333"
+            android:textSize="@dimen/dp_16" />
+    </FrameLayout>
+
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

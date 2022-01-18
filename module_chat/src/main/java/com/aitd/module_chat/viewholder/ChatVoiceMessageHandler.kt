@@ -97,22 +97,22 @@ class ChatVoiceMessageHandler : ChatBaseMessageHandler() {
 
         var animationDrawable: AnimationDrawable
         if (message.direction == Message.Direction.DIRECTION_SEND) {
-            animationDrawable = (context.resources.getDrawable(R.drawable.imui_an_voice_sent) as AnimationDrawable)
+            animationDrawable = (context.resources.getDrawable(R.drawable.animation_list_voice_sent) as AnimationDrawable)
             if (playing) {
                 viewHolder.voiceIcon?.setImageDrawable(animationDrawable)
                 animationDrawable.start()
             } else {
-                viewHolder.voiceIcon?.setImageDrawable(context.resources.getDrawable(R.drawable.imui_ic_voice_sent_level_3))
+                viewHolder.voiceIcon?.setImageDrawable(context.resources.getDrawable(R.drawable.vector_voice_sent_leve3))
                 animationDrawable.stop()
             }
         } else {
-            animationDrawable = (context.resources.getDrawable(R.drawable.imui_an_voice_receive) as AnimationDrawable)
+            animationDrawable = (context.resources.getDrawable(R.drawable.animation_list_voice_receive) as AnimationDrawable)
             viewHolder.voiceIcon?.setImageDrawable(animationDrawable)
             if (playing) {
                 viewHolder.voiceIcon?.setImageDrawable(animationDrawable)
                 animationDrawable.start()
             } else {
-                viewHolder.voiceIcon?.setImageDrawable(context.resources.getDrawable(R.drawable.imui_ic_voice_level_3))
+                viewHolder.voiceIcon?.setImageDrawable(context.resources.getDrawable(R.drawable.vector_voice_leve3))
                 animationDrawable.stop()
             }
         }

@@ -184,7 +184,7 @@ public class RecordButton extends AppCompatButton {
         view = View.inflate(getContext(), R.layout.imui_dialog_record, null);
         mStateIV = (ImageView) view.findViewById(R.id.rc_audio_state_image);
         mStateTV = (TextView) view.findViewById(R.id.rc_audio_state_text);
-        mStateIV.setImageDrawable(getResources().getDrawable(R.drawable.imui_anim_mic));
+        mStateIV.setImageDrawable(getResources().getDrawable(R.drawable.animation_list_volume));
         anim = (AnimationDrawable) mStateIV.getDrawable();
         anim.start();
         mStateIV.setVisibility(View.VISIBLE);

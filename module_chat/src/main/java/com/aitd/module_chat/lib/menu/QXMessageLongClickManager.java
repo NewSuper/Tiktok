@@ -112,7 +112,7 @@ public class QXMessageLongClickManager {
      * @return
      */
     private MessageItemLongClickAction buildReplyAtion() {
-        MenuActionType menuActionType = createMenu(MenuType.REPLY, R.string.qx_msg_pop_reply, R.drawable.imui_ic_msg_pop_reply);
+        MenuActionType menuActionType = createMenu(MenuType.REPLY, R.string.qx_msg_pop_reply, R.drawable.vector_pop_reply);
         return new MessageItemLongClickAction.Builder().MenuActionType(menuActionType).build();
     }
 
@@ -122,7 +122,7 @@ public class QXMessageLongClickManager {
      * @return
      */
     private MessageItemLongClickAction buildForwardAtion() {
-        MenuActionType menuActionType = createMenu(MenuType.FORWARD, R.string.qx_msg_pop_retransmission, R.drawable.imui_ic_msg_pop_retransmission);
+        MenuActionType menuActionType = createMenu(MenuType.FORWARD, R.string.qx_msg_pop_retransmission, R.drawable.vector_pop_retransmission);
         return new MessageItemLongClickAction.Builder().MenuActionType(menuActionType).build();
     }
 
@@ -132,7 +132,7 @@ public class QXMessageLongClickManager {
      * @return
      */
     private MessageItemLongClickAction buildCollectionAtion() {
-        MenuActionType menuActionType = createMenu(MenuType.COLLECTION, R.string.qx_msg_pop_favorite, R.drawable.imui_ic_msg_pop_favorite);
+        MenuActionType menuActionType = createMenu(MenuType.COLLECTION, R.string.qx_msg_pop_favorite, R.drawable.vector_pop_favorite);
         return new MessageItemLongClickAction.Builder().MenuActionType(menuActionType).build();
     }
 
@@ -142,7 +142,7 @@ public class QXMessageLongClickManager {
      * @return
      */
     private MessageItemLongClickAction buildMuitChoiceAtion() {
-        MenuActionType menuActionType = createMenu(MenuType.MUIT_CHOICE, R.string.qx_msg_pop_check, R.drawable.imui_ic_msg_pop_check);
+        MenuActionType menuActionType = createMenu(MenuType.MUIT_CHOICE, R.string.qx_msg_pop_check, R.drawable.vector_pop_check);
         return new MessageItemLongClickAction.Builder().MenuActionType(menuActionType).build();
     }
 
@@ -152,7 +152,7 @@ public class QXMessageLongClickManager {
      * @return
      */
     private MessageItemLongClickAction buildRevokeAtion() {
-        MenuActionType menuActionType = createMenu(MenuType.REVOKE, R.string.qx_msg_pop_recall, R.drawable.imui_ic_msg_pop_recall);
+        MenuActionType menuActionType = createMenu(MenuType.REVOKE, R.string.qx_msg_pop_recall, R.drawable.vector_pop_recall);
         return new MessageItemLongClickAction.Builder().MenuActionType(menuActionType).build();
     }
 
@@ -162,7 +162,7 @@ public class QXMessageLongClickManager {
      * @return
      */
     private MessageItemLongClickAction buildDeleteAtion() {
-        MenuActionType menuActionType = createMenu(MenuType.DELETE, R.string.qx_msg_pop_delete, R.drawable.imui_ic_msg_pop_delete);
+        MenuActionType menuActionType = createMenu(MenuType.DELETE, R.string.qx_msg_pop_delete, R.drawable.vector_pop_delete);
         return new MessageItemLongClickAction.Builder().MenuActionType(menuActionType).build();
     }
 
@@ -182,7 +182,7 @@ public class QXMessageLongClickManager {
      * @return
      */
     private MessageItemLongClickAction buildCopyAtion() {
-        MenuActionType menuActionType = createMenu(MenuType.COPY, R.string.qx_msg_pop_copy, R.drawable.imui_ic_msg_pop_copy);
+        MenuActionType menuActionType = createMenu(MenuType.COPY, R.string.qx_msg_pop_copy, R.drawable.vector_pop_copy);
         return new MessageItemLongClickAction.Builder().MenuActionType(menuActionType).build();
     }
 

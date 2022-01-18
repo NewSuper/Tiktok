@@ -61,7 +61,7 @@
         android:layout_width="14dp"
         android:layout_height="14dp"
         android:layout_marginTop="5dp"
-        android:src="@drawable/imui_ic_image_text_activity"
+        android:src="@drawable/vector_shequ"
         app:layout_constraintLeft_toLeftOf="@id/line"
         app:layout_constraintTop_toBottomOf="@id/line" />
 

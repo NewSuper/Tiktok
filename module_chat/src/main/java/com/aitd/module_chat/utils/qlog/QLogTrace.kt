@@ -55,9 +55,9 @@ class QLogTrace {
                 if (!QXIMClient.instance.getHttpHost().isNullOrEmpty() && !QXIMClient.instance.getHttpHost().isNullOrEmpty()) {
                     val sb = StringBuilder()
                     sb.append("OS: Android, ")
-                    sb.append("OS Version: ${SystemUtil.getSystemVersion()},")
-                    sb.append("Model: ${SystemUtil.getSystemModel()},")
-                    sb.append("Brand: ${SystemUtil.getDeviceBrand()} | ")
+                    sb.append("OS Version: ${SystemUtil.systemVersion},")
+                    sb.append("Model: ${SystemUtil.systemModel},")
+                    sb.append("Brand: ${SystemUtil.deviceBrand} | ")
                     sb.append("$appkey | ")
                     sb.append("${QXIMClient.instance.getCurUserId()!!} | ")
                     sb.append("$content")

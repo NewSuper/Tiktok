@@ -118,7 +118,7 @@ class QXCallManager private constructor() {
                 receiveListener?.onReceivedCall(callSession!!)
                 callSession?.apply {
                     callState = CallState.CALL_START
-                    startTime = System.currentTimeMillis()
+                    startTime = System.currentTimeMillis() //todo 注释这暗，可解决音视频用户取消呼叫，2条消息记录的问题 ，待验证
                 }
             }
             CALL_SEND_CANCEL -> {

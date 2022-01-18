@@ -370,7 +370,7 @@ class RegisterActivity : BaseMvvmActivity<LoginViewModel, LoginActivityRegisterB
             resultCode?.let {
                 if (it.contains("inviteCode=")) {
                     val inviteCode = StringUtil.getOneParameter(it, "inviteCode")
-                    loadInvatationCodeInfo(inviteCode)
+                    loadInvatationCodeInfo(inviteCode!!)
                 } else {
                     if (inviteTipsDialog == null) {
                         inviteTipsDialog = CommonDialog(this).apply {

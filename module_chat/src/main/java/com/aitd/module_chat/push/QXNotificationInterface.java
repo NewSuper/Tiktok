@@ -214,12 +214,21 @@ public class QXNotificationInterface {
             while (iterator.hasNext()) {
                 Map.Entry<String, List<PushNotificationMessage>> entry = iterator.next();
                 if (message.getConversationType().equals(QXPushClient.ConversationType.GROUP)) {
-                    if (entry.getKey().equals(message.getTargetId())) {
+//                    if (entry.getKey().equals(message.getTargetId())) {
+//                        int size = entry.getValue().size();
+//                        content = String.format(rc_notification_new_msg, size, entry.getValue().get(size - 1).getPushContent());
+//                    }
+                    //todo 通知entry可能为null ,空指针判断
+                    if (TextUtils.equals(entry.getKey(), message.getTargetId())) {
                         int size = entry.getValue().size();
                         content = String.format(rc_notification_new_msg, size, entry.getValue().get(size - 1).getPushContent());
                     }
                 } else {
-                    if (entry.getKey().equals(message.getSenderId())) {
+//                    if (entry.getKey().equals(message.getSenderId())) {
+//                        int size = entry.getValue().size();
+//                        content = String.format(rc_notification_new_msg, entry.getValue().size(), entry.getValue().get(size - 1).getPushContent());
+//                    }
+                    if (TextUtils.equals(entry.getKey(), message.getSenderId())) {
                         int size = entry.getValue().size();
                         content = String.format(rc_notification_new_msg, entry.getValue().size(), entry.getValue().get(size - 1).getPushContent());
                     }

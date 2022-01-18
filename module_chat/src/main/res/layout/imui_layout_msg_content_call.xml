@@ -18,7 +18,7 @@
             android:layout_height="@dimen/dp_21"
             android:layout_marginLeft="@dimen/dp_10"
             android:scaleType="centerInside"
-            android:src="@drawable/imui_ic_call_audio_cancel"
+            android:src="@drawable/vector_call_audio_cancel"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

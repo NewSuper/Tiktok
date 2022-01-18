@@ -9,8 +9,8 @@ apply plugin: 'kotlin-kapt'
 apply plugin: 'com.google.protobuf'//protobuf解析
 apply from: "../junit.build.gradle"
 
-apply plugin: 'com.huawei.agconnect'
-apply plugin: 'com.google.gms.google-services'
+//apply plugin: 'com.huawei.agconnect'
+//apply plugin: 'com.google.gms.google-services'
 
 apply plugin: 'org.greenrobot.greendao'
 android {
@@ -35,10 +35,6 @@ android {
                 arguments = [AROUTER_MODULE_NAME: project.getName()]
             }
         }
-
-//        ndk {
-//            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "x86","x86_64"
-//        }
     }
 
     buildTypes {

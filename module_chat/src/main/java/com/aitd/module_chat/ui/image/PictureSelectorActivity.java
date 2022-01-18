@@ -1287,7 +1287,7 @@ public class PictureSelectorActivity extends BaseActivity {
                                         PicItemHolder.itemAllSelectedMediaItemList.remove(item);
                                     }
 
-                                    holder.mask.setBackgroundDrawable(PictureSelectorActivity.this.getResources().getDrawable(R.drawable.imui_sp_grid_mask));
+                                    holder.mask.setBackgroundDrawable(PictureSelectorActivity.this.getResources().getDrawable(R.drawable.shape_gradient_black));
                                 }
 
                                 PictureSelectorActivity.this.updateToolbar();
@@ -1297,7 +1297,7 @@ public class PictureSelectorActivity extends BaseActivity {
                     if (item.selected) {
                         holder.mask.setBackgroundColor(PictureSelectorActivity.this.getResources().getColor(R.color.rc_picsel_grid_mask_pressed));
                     } else {
-                        holder.mask.setBackgroundDrawable(PictureSelectorActivity.this.getResources().getDrawable(R.drawable.imui_sp_grid_mask));
+                        holder.mask.setBackgroundDrawable(PictureSelectorActivity.this.getResources().getDrawable(R.drawable.shape_gradient_black));
                     }
 
                     //过大文件不给选中
@@ -1306,7 +1306,7 @@ public class PictureSelectorActivity extends BaseActivity {
                         holder.mask.setBackgroundColor(PictureSelectorActivity.this.getResources().getColor(R.color.rc_picsel_grid_mask_pressed));
                     } else {
                         holder.checkBox.setVisibility(View.VISIBLE);
-                        holder.mask.setBackgroundDrawable(PictureSelectorActivity.this.getResources().getDrawable(R.drawable.imui_sp_grid_mask));
+                        holder.mask.setBackgroundDrawable(PictureSelectorActivity.this.getResources().getDrawable(R.drawable.shape_gradient_black));
                     }
                     return viewx;
                 }

@@ -39,7 +39,7 @@
         android:layout_height="@dimen/dp_40"
         android:layout_marginRight="@dimen/dp_10"
         android:scaleType="centerInside"
-        android:src="@drawable/imui_ic_file_ppt"
+        android:src="@drawable/vector_file_ppt"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

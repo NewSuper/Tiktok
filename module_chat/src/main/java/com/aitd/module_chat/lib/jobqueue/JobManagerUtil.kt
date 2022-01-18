@@ -19,7 +19,7 @@ class JobManagerUtil {
 
     private fun getConfiguration(): Configuration {
 
-        return Configuration.Builder(GlobalContextManager.getInstance().context).customLogger(object :
+        return Configuration.Builder(GlobalContextManager.instance.context!!).customLogger(object :
             CustomLogger {
             override fun isDebugEnabled(): Boolean {
                 return false

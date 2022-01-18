@@ -30,10 +30,10 @@ class ChatCallMessageHandler : ChatBaseMessageHandler() {
             if (content.endType == 0) {
                 tv_call.text = duration
                 //已通话
-                iv_call_icon.setImageResource(R.drawable.imui_ic_call_audio_accepted)
+                iv_call_icon.setImageResource(R.drawable.vector_call_audio_accepted)
             } else {
                 //已取消
-                iv_call_icon.setImageResource(R.drawable.imui_ic_call_audio_cancel)
+                iv_call_icon.setImageResource(R.drawable.vector_call_audio_cancel)
                 tv_call.text = getCallState(itemView.context,content.endType,message.direction)
             }
         }  else {
@@ -44,7 +44,7 @@ class ChatCallMessageHandler : ChatBaseMessageHandler() {
                 tv_call.text = getCallState(itemView.context,content.endType,message.direction)
             }
             //video
-            iv_call_icon.setImageResource(R.drawable.imui_ic_call_video)
+            iv_call_icon.setImageResource(R.drawable.vector_call_video)
         }
     }
 

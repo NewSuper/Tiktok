@@ -222,7 +222,7 @@ class QXCallMedia(
             var rtcServerConfig = QXCallManager.rtcServerConfig
             if (!rtcServerConfig?.whiteDeveice.isNullOrEmpty()) {
                 val whiteDevices = rtcServerConfig!!.whiteDeveice.split(";")
-                val curDevice = SystemUtil.getSystemModel()
+                val curDevice = SystemUtil.systemModel
                 val device = whiteDevices.find { it.equals(curDevice, true) }
                 if (device == null) {
                     encoderFactory = SoftwareVideoEncoderFactory()

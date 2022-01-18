@@ -9,7 +9,6 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.text.TextUtils;
 
-import com.huke.socialcontact.chat.im.widget.SubsamplingScaleImageView;
 
 import java.io.InputStream;
 import java.util.List;

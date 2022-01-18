@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/imui_selector_dialog_retransmission_one"
+        android:text="@string/voice_choose_yuyan"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold"
+        style="?android:attr/borderlessButtonStyle"/>
+    <Button
+        android:id="@+id/btnChinese"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/imui_selector_dialog_retransmission_common"
+        android:text="@string/voice_chinese"
+        android:textSize="@dimen/sp_15"
+        style="?android:attr/borderlessButtonStyle"/>
+
+    <Button
+        android:id="@+id/btnEnglisn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/imui_selector_dialog_retransmission_common"
+        android:text="@string/voice_english"
+        android:textSize="@dimen/sp_15"
+        style="?android:attr/borderlessButtonStyle"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_7"
+        android:background="@color/dialog_btn_diviver" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/imui_selector_dialog_retransmission_common"
+        android:text="@string/qx_name_record_btn_cancel"
+        android:textSize="@dimen/sp_15"
+        style="?android:attr/borderlessButtonStyle"/>
+</LinearLayout>

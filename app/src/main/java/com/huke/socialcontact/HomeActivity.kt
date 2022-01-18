@@ -40,12 +40,12 @@ class HomeActivity: BaseActivity() {
                 ARouter.getInstance().build(ARouterUrl.Mine.ROUTE_MINE_ACTIVITY).navigation()
             }
             R.id.btn_chat -> {
-                //  ARouter.getInstance().build(ARouterUrl.Chat.ROUTE_CHAT_ACTIVITY).navigation()
-                mImFragment =
-                    ARouter.getInstance().build(ARouterUrl.Chat.ROUTE_CHAT_FRAGMENT)
-                        .navigation() as BaseFragment
-                supportFragmentManager.beginTransaction().replace(R.id.fl_content, mImFragment!!)
-                    .commit()
+                  ARouter.getInstance().build(ARouterUrl.Chat.ROUTE_CHAT_ACTIVITY).navigation()
+//                mImFragment =
+//                    ARouter.getInstance().build(ARouterUrl.Chat.ROUTE_CHAT_FRAGMENT)
+//                        .navigation() as BaseFragment
+//                supportFragmentManager.beginTransaction().replace(R.id.fl_content, mImFragment!!)
+//                    .commit()
             }
             R.id.btn_wealth -> {
                 ARouter.getInstance().build(ARouterUrl.Wealth.ROUTE_WEALTH_ACTIVITY).navigation()

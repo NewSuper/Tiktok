@@ -12,6 +12,7 @@ import com.aitd.library_common.encrypt.EncryptHelper
 import com.aitd.library_common.encrypt.EncryptRequest
 import com.aitd.library_common.extend.launchDataResult
 import com.aitd.library_common.network.BaseResponse
+import com.aitd.library_common.utils.Base64ImageUtil
 import com.aitd.library_common.utils.UniversalID
 import com.aitd.module_login.R
 import com.aitd.module_login.bean.CheckAccountBean
@@ -19,7 +20,6 @@ import com.aitd.module_login.bean.CheckEmailBean
 import com.aitd.module_login.bean.LoginFaceRequest
 import com.aitd.module_login.bean.VerificationInviteBean
 import com.aitd.module_login.net.NetLoginProvider
-import com.aitd.library_common.utils.Base64ImageUtil
 import com.blankj.utilcode.util.LogUtils
 import com.blankj.utilcode.util.StringUtils
 import com.blankj.utilcode.util.ToastUtils
@@ -30,8 +30,11 @@ import java.util.*
 
 class LoginViewModel : BaseViewModel() {
     val ERROR_USER_PASSWORD = "STEB2003" //
+
     val ERROR_FACE_NOT_MATCH = "STEB2001" //人脸匹配失败
+
     val ERROR_OFFSITE_LOGIN = "STEB2000" //异地登录
+
 
     val sendSmsSuccess: MutableLiveData<Boolean> = MutableLiveData()
     val showLoginDialog: MutableLiveData<Boolean> = MutableLiveData()

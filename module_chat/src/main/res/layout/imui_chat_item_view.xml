@@ -12,7 +12,7 @@
         android:layout_height="@dimen/chat_bottom_add_panel_button_size"
         android:padding="16dp"
         android:background="@drawable/imui_selector_chat_bottom_add_bg"
-        android:src="@drawable/imui_ic_chat_gallery" />
+        android:src="@drawable/vector_gallery" />
 
     <TextView
         android:id="@+id/tv_content"

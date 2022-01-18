@@ -1,5 +1,6 @@
 package com.aitd.module_login.ui
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
@@ -8,6 +9,7 @@ import android.text.Html
 import android.text.TextUtils
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
+import android.util.Log
 import android.view.View
 import androidx.lifecycle.Observer
 import com.aitd.library_common.app.BaseApplication
@@ -21,17 +23,17 @@ import com.aitd.library_common.router.ARouterUrl
 import com.aitd.library_common.statistics.EventConstant
 import com.aitd.library_common.statistics.MobclickAgent
 import com.aitd.library_common.utils.PreferenceUtils
+import com.aitd.library_common.utils.SimpleTextWatcher
 import com.aitd.library_common.utils.UniversalID
 import com.aitd.module_login.R
 import com.aitd.module_login.bean.LoginFaceRequest
 import com.aitd.module_login.databinding.LoginActivityLoginBinding
-import com.aitd.library_common.utils.RegexCheckUtils
 import com.aitd.module_login.utils.LoginResultHelper
 import com.aitd.module_login.utils.NoSenseCaptchaUtils
-import com.aitd.library_common.utils.SimpleTextWatcher
 import com.aitd.module_login.vm.LoginViewModel
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.launcher.ARouter
+import com.blankj.utilcode.util.RegexUtils
 import com.blankj.utilcode.util.ToastUtils
 import com.google.gson.Gson
 import com.netease.nis.captcha.Captcha
@@ -89,7 +91,7 @@ class LoginHomeActivity : BaseMvvmActivity<LoginViewModel, LoginActivityLoginBin
                 }
             }
         })
-        initObser()
+       // initObser()
         showHeadPicCut()
     }
 
@@ -253,6 +255,15 @@ class LoginHomeActivity : BaseMvvmActivity<LoginViewModel, LoginActivityLoginBin
             }
             R.id.tv_login_submit -> {
                 checkLogin()
+
+//              Intent intent = new Intent(context, MainActivity.class);
+//              intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+//              context.startActivity(intent);
+//                Log.e("login", "viewClick: -----------------" )
+//                ARouter.getInstance().build(ARouterUrl.Main.ROUTE_MAIN_ACTIVITY)
+//                    .withFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
+//                    .navigation()
+
             }
             R.id.tv_account_switch -> {
                 mBinding.tvMobileOrEmail.text = ""
@@ -342,7 +353,7 @@ class LoginHomeActivity : BaseMvvmActivity<LoginViewModel, LoginActivityLoginBin
     private fun checkLogin() {
         val status = mMobileOrEmail.contains("@")
         if (status) {
-            if (!RegexCheckUtils.isEmail(mMobileOrEmail.trim { it <= ' ' })) {
+            if (!RegexUtils.isEmail(mMobileOrEmail.trim { it <= ' ' })) {
                 ToastUtils.showShort(getString(R.string.email_format_error))
                 return
             }
@@ -380,7 +391,7 @@ class LoginHomeActivity : BaseMvvmActivity<LoginViewModel, LoginActivityLoginBin
 
     override fun onFocusChange(v: View, hasFocus: Boolean) {
         when (v.id) {
-            R.id.et_mobile_or_email -> {
+            R.id.edt_fp_mobile_or_email -> {
                 if (hasFocus) {
                     setViewLineBackgroundColor(
                         mBinding.vDlUnderLineMobileOrEmail,

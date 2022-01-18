@@ -63,7 +63,7 @@
             android:layout_width="@dimen/message_avatar_official_flag_size"
             android:layout_height="@dimen/message_avatar_official_flag_size"
             android:scaleType="centerCrop"
-            android:src="@drawable/imui_ic_avatar_official_flag"
+            android:src="@drawable/vector_avatar_official_flag"
             android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="@id/iv_avatar"
             app:layout_constraintRight_toRightOf="@id/iv_avatar" />

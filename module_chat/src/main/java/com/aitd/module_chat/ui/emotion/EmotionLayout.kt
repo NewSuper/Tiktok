@@ -132,9 +132,9 @@ class EmotionLayout: LinearLayout {
     }
 
     private fun initTabs() {
-        addTab(0,R.drawable.imui_ic_chat_emoji_normal)
-        addTab(1,R.drawable.imui_chat_sticker_fav)
-        addTab(2,R.drawable.imui_chat_sticker_system)
+        addTab(0,R.drawable.vector_emoji_normal)
+        addTab(1,R.drawable.vector_sticker_fav)
+        addTab(2,R.drawable.vector_sticker_system)
         selectTab(0)
     }
 
@@ -156,7 +156,7 @@ class EmotionLayout: LinearLayout {
         for (i in 0 until mTabViewArray.size() ) {
             val tab = mTabViewArray[i]
             if (i == tabPosi) {
-                tab.setBackgroundResource(R.drawable.imui_shape_chat_emotion_tab_bg)
+                tab.setBackgroundResource(R.drawable.shape_white_2dp)
             } else {
                 tab.background = null
             }

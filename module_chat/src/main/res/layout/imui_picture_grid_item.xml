@@ -15,7 +15,7 @@
         android:id="@+id/ps_grid_mask"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/imui_sp_grid_mask">
+        android:background="@drawable/shape_gradient_black">
 
         <view
             android:id="@+id/ps_grid_checkbox"

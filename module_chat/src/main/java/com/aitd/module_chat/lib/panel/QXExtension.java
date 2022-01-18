@@ -43,7 +43,6 @@ import org.jetbrains.annotations.NotNull;
 
 import java.lang.reflect.Type;
 import java.util.LinkedHashMap;
-import java.util.List;
 import java.util.concurrent.locks.ReentrantLock;
 
 import androidx.annotation.NonNull;
@@ -133,9 +132,6 @@ public class QXExtension {
         return this;
     }
 
-    public static final int EVERY_PAGE_SIZE = 21;
-    private List<EmojiBean> mListEmoji;
-
     public QXExtension bindEmojiData(Context context) {
         mEmojiLayout.setemotionClickListener(new IEmotionClickLisntener() {
             @Override
@@ -156,7 +152,7 @@ public class QXExtension {
             public void emojiSendClick() {
                 if (mActivity != null && mActivity instanceof BaseChatActivity) {
                     BaseChatActivity chatActivity = (BaseChatActivity) mActivity;
-                    // chatActivity.sendTextMsg();
+                    chatActivity.sendTextMsg();
                 }
             }
 
@@ -164,8 +160,8 @@ public class QXExtension {
             public void stickerClick(Context context, StickerItem stickerItem) {
                 if (mActivity != null && mActivity instanceof BaseChatActivity) {
                     BaseChatActivity chatActivity = (BaseChatActivity) mActivity;
-//                    chatActivity.sendGifMessage(stickerItem.getLocalPath(), stickerItem.getOriginUrl(),
-//                            stickerItem.getWidth(), stickerItem.getHeight(), stickerItem.getIndex());
+                    chatActivity.sendGifMessage(stickerItem.getLocalPath(), stickerItem.getOriginUrl(),
+                            stickerItem.getWidth(), stickerItem.getHeight(), stickerItem.getIndex());
                 }
             }
 
@@ -243,7 +239,7 @@ public class QXExtension {
                 if (event.getAction() == MotionEvent.ACTION_UP && mBottomLayout.isShown()) {
                     lockContentHeight();//显示软件盘时，锁定内容高度，防止跳闪。
                     hideBottomLayout(true);//隐藏表情布局，显示软件盘
-                    mIvEmoji.setImageResource(R.drawable.imui_ic_chat_emoji);
+                    mIvEmoji.setImageResource(R.drawable.vector_emoji);
                     //软件盘显示后，释放内容高度
                     mEditText.postDelayed(new Runnable() {
                         @Override
@@ -324,6 +320,10 @@ public class QXExtension {
         mAudioButton = audioBtn;
         return this;
     }
+//    public QXExtension bindAudioBtn(RecordButton2 audioBtn) {
+//        mAudioButton = audioBtn;    腾讯云语音使用这个
+//        return this;
+//    }
 
     //绑定语音图片点击事件
     public QXExtension bindAudioIv(AppCompatImageView audioIv) {
@@ -353,14 +353,14 @@ public class QXExtension {
     private void hideAudioButton() {
         mAudioButton.setVisibility(View.GONE);
         mEditText.setVisibility(View.VISIBLE);
-        mAudioIv.setImageResource(R.drawable.imui_ic_chat_audio_msg);
+        mAudioIv.setImageResource(R.drawable.vector_audio_msg);
     }
 
 
     private void showAudioButton() {
         mAudioButton.setVisibility(View.VISIBLE);
         mEditText.setVisibility(View.GONE);
-        mAudioIv.setImageResource(R.drawable.imui_ic_chat_keypad);
+        mAudioIv.setImageResource(R.drawable.vector_keypad);
         if (mBottomLayout.isShown()) {
             hideBottomLayout(false);
         } else {
@@ -386,7 +386,7 @@ public class QXExtension {
                         return;
                     }
                 } else if (mEmojiLayout.isShown() && !mAddLayout.isShown()) {
-                    mIvEmoji.setImageResource(R.drawable.imui_ic_chat_emoji);
+                    mIvEmoji.setImageResource(R.drawable.vector_emoji);
                     if (mBottomLayout.isShown()) {
                         lockContentHeight();//显示软件盘时，锁定内容高度，防止跳闪。
                         hideBottomLayout(true);//隐藏表情布局，显示软件盘
@@ -525,12 +525,12 @@ public class QXExtension {
 
     private void showEmotionLayout() {
         mEmojiLayout.setVisibility(View.VISIBLE);
-        mIvEmoji.setImageResource(R.drawable.imui_ic_chat_keypad);
+        mIvEmoji.setImageResource(R.drawable.vector_keypad);
     }
 
     private void hideEmotionLayout() {
         mEmojiLayout.setVisibility(View.GONE);
-        mIvEmoji.setImageResource(R.drawable.imui_ic_chat_emoji);
+        mIvEmoji.setImageResource(R.drawable.vector_emoji);
     }
 
 

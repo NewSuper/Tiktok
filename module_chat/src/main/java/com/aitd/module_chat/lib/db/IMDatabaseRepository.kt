@@ -39,7 +39,7 @@ class IMDatabaseRepository {
     private var unTrustTimeDao: UnTrustTimeDao
 
     init {
-        var db = IMDatabase.getDatabase(GlobalContextManager.getInstance().context)
+        var db = IMDatabase.getDatabase(GlobalContextManager.instance.context)
         userDao = db!!.userDao()
         messageDao = db.messageDao()
         conversationDao = db.conversationDao()

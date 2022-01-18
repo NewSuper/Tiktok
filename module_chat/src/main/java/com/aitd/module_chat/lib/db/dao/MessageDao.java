@@ -150,7 +150,6 @@ public interface MessageDao {
     @Query("SELECT * FROM message WHERE conversation_id = :conversationId AND owner_id = :ownerId ORDER BY timestamp DESC LIMIT 1")
     MessageEntity getLatestMessaged(String conversationId, String ownerId);
 
-    //newsuper new add
 //    @Query("SELECT * FROM message WHERE conversation_id = :conversationId AND owner_id = :ownerId ORDER BY timestamp DESC LIMIT 1")
 //    MessageEntity getFirstMessaged(String conversationId, String ownerId);
 

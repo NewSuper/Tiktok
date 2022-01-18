@@ -47,7 +47,7 @@ public class ChatItemView extends ConstraintLayout {
 
         if (attrs != null){
             TypedArray array = getContext().obtainStyledAttributes(attrs, R.styleable.ChatItemView);
-            int icon = array.getResourceId(R.styleable.ChatItemView_icon, R.drawable.imui_ic_chat_gallery);
+            int icon = array.getResourceId(R.styleable.ChatItemView_icon, R.drawable.vector_gallery);
             String text = array.getString(R.styleable.ChatItemView_text);
             array.recycle();
             mIcon.setImageResource(icon);

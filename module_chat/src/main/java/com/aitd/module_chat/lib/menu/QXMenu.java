@@ -49,7 +49,7 @@ public class QXMenu {
 
     public static class QXMenuBuilder {
         private String tag;
-        private int icon = R.drawable.imui_ic_msg_pop_copy;
+        private int icon = R.drawable.vector_pop_copy;
         private int text = R.string.qx_msg_pop_copy;
         private QXMenuAction action;
         private QXMenuType type;

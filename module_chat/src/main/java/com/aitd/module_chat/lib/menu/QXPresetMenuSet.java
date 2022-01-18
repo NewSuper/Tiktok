@@ -12,21 +12,21 @@ public class QXPresetMenuSet {
      * 复制
      */
     public static final QXMenu QX_MENU_COPY = new QXMenu.QXMenuBuilder().setType(QXMenuType.MENU_TYPE_COPY).
-            setIcon(R.drawable.imui_ic_msg_pop_copy).
+            setIcon(R.drawable.vector_pop_copy).
             setText(R.string.qx_msg_pop_copy).
             build();
     /**
      * 回复
      */
     public static final QXMenu QX_MENU_REPLY = new QXMenu.QXMenuBuilder().setType(QXMenuType.MENU_TYPE_REPLY).
-            setIcon(R.drawable.imui_ic_msg_pop_reply).
+            setIcon(R.drawable.vector_pop_reply).
             setText(R.string.qx_msg_pop_reply).
             build();
     /**
      * 转发
      */
     public static final QXMenu QX_MENU_FORWARD = new QXMenu.QXMenuBuilder().setType(QXMenuType.MENU_TYPE_FORWARD).
-            setIcon(R.drawable.imui_ic_msg_pop_retransmission).
+            setIcon(R.drawable.vector_pop_retransmission).
             setText(R.string.qx_msg_pop_retransmission).
             build();
 
@@ -34,7 +34,7 @@ public class QXPresetMenuSet {
      * 收藏
      */
     public static final QXMenu QX_MENU_FAVORITE = new QXMenu.QXMenuBuilder().setType(QXMenuType.MENU_TYPE_FAVORITE).
-            setIcon(R.drawable.imui_ic_msg_pop_favorite).
+            setIcon(R.drawable.vector_pop_favorite).
             setText(R.string.qx_msg_pop_favorite).
             build();
 
@@ -42,7 +42,7 @@ public class QXPresetMenuSet {
      * 多选
      */
     public static final QXMenu QX_MENU_CHECK = new QXMenu.QXMenuBuilder().setType(QXMenuType.MENU_TYPE_CHECK).
-            setIcon(R.drawable.imui_ic_msg_pop_check).
+            setIcon(R.drawable.vector_pop_check).
             setText(R.string.qx_msg_pop_check).
             build();
 
@@ -50,7 +50,7 @@ public class QXPresetMenuSet {
      * 撤回
      */
     public static final QXMenu QX_MENU_RECALL = new QXMenu.QXMenuBuilder().setType(QXMenuType.MENU_TYPE_RECALL).
-            setIcon(R.drawable.imui_ic_msg_pop_recall).
+            setIcon(R.drawable.vector_pop_recall).
             setText(R.string.qx_msg_pop_recall).
             setFilter(new QXMenu.MenuFilter() {
                 @Override
@@ -66,7 +66,7 @@ public class QXPresetMenuSet {
      * 删除
      */
     public static final QXMenu QX_MENU_DELETE = new QXMenu.QXMenuBuilder().setType(QXMenuType.MENU_TYPE_DELETE).
-            setIcon(R.drawable.imui_ic_msg_pop_delete).
+            setIcon(R.drawable.vector_pop_delete).
             setText(R.string.qx_msg_pop_delete).
             build();
 }

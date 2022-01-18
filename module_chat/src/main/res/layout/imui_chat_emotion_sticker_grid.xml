@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@drawable/imui_shape_chat_emotion_sticker_bg"
+        android:background="@drawable/shape_white_5dp"
         android:gravity="center"
         android:visibility="gone">
 

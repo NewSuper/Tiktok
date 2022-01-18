@@ -7,6 +7,7 @@ import android.content.res.Resources;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
 
+import com.aitd.library_common.BuildConfig;
 import com.aitd.library_common.base.Constans;
 import com.aitd.library_common.base.VersionConstant;
 import com.aitd.library_common.data.UserResponse;
@@ -47,10 +48,10 @@ public class BaseApplication extends MultiDexApplication {
     }
 
     private void initARouter() {
-      //  if (BuildConfig.DEBUG) {
+        if (BuildConfig.DEBUG) {
             ARouter.openLog();
             ARouter.openDebug();
-       // }
+        }
         ARouter.init(this);
     }
 
