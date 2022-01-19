@@ -75,6 +75,7 @@ public class BaseApplication extends MultiDexApplication {
     public static void setUserCache(String json) {
         PreferenceUtils.setString(getAppContext(), "user", json + "");
         userBean = JsonUtil.json2Bean(json, UserResponse.class);
+      //  Log.e("setUserCache", "setUserCache:---------- "+json );
     }
 
     private void initLanguage() {

@@ -52,8 +52,7 @@ import com.google.gson.Gson
 import com.mylhyl.acp.Acp
 import com.mylhyl.acp.AcpListener
 import com.mylhyl.acp.AcpOptions
-import kotlinx.android.synthetic.main.activity_chat_home.*
-import kotlinx.android.synthetic.main.activity_chat_home.tv_title_bar_name
+
 import kotlinx.android.synthetic.main.imui_activity_chat.*
 import kotlinx.android.synthetic.main.imui_common_title_bar.*
 import kotlinx.android.synthetic.main.imui_include_add_layout.*

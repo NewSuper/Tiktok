@@ -91,12 +91,12 @@ class LoginHomeActivity : BaseMvvmActivity<LoginViewModel, LoginActivityLoginBin
                 }
             }
         })
-       // initObser()
+        initObser()
         showHeadPicCut()
     }
 
     private fun initObser() {
-        mViewModel.checkEmailBind.observe(this, Observer {
+        mViewModel.checkEmailBind.observe(this, {
             if (it.smsFlag === 0 && TextUtils.isEmpty(it.email)) {
                 ToastUtils.showShort(R.string.user_no_email_error)
             } else {
@@ -108,7 +108,7 @@ class LoginHomeActivity : BaseMvvmActivity<LoginViewModel, LoginActivityLoginBin
                     .navigation()
             }
         })
-        mViewModel.loginResult.observe(this, Observer {
+        mViewModel.loginResult.observe(this, {
             when (it.code) {
                 "STEB2003" -> {
                     showPasswordErrorDialog(Gson().toJson(it.data))
@@ -132,7 +132,6 @@ class LoginHomeActivity : BaseMvvmActivity<LoginViewModel, LoginActivityLoginBin
                         )
                         LoginResultHelper.login(this, userResponse, mMobileOrEmail, mPwd)
                     }
-
                 }
                 else -> {
                     ToastUtils.showShort(it.msg)
@@ -255,11 +254,6 @@ class LoginHomeActivity : BaseMvvmActivity<LoginViewModel, LoginActivityLoginBin
             }
             R.id.tv_login_submit -> {
                 checkLogin()
-
-//              Intent intent = new Intent(context, MainActivity.class);
-//              intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-//              context.startActivity(intent);
-//                Log.e("login", "viewClick: -----------------" )
 //                ARouter.getInstance().build(ARouterUrl.Main.ROUTE_MAIN_ACTIVITY)
 //                    .withFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
 //                    .navigation()

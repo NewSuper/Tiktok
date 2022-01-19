@@ -57,8 +57,8 @@ class QXIMManager private constructor() {
         initProvider()
         cacheConnect()
         initExtensionModules(mContext)
-        testRegisterCustomMessage()
-        testSystemCustomTextMessage()
+       // testRegisterCustomMessage()
+       // testSystemCustomTextMessage()
         initStatusBar()
         QXIMKit.getInstance().setCustomDomainProvider {
             "https://qx-thirdpart.aitdcoin.com/" //  return "https://qx-thirdpart-beta.aitdcoin.com/"
