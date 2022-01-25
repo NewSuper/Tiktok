@@ -1,8 +1,0 @@
-<resources>
-    <string name="mine_app_name">我的</string>
-
-    <string name="tab_vm">首页</string>
-    <string name="tab_msg">消息</string>
-    <string name="tab_find">发现</string>
-    <string name="tab_mine">我的</string>
-</resources>

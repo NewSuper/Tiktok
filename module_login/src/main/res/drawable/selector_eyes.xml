@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@mipmap/login_ic_pay_open" android:state_checked="true"/>
-    <item android:drawable="@mipmap/login_ic_pay_hide" android:state_checked="false"/>
-</selector>

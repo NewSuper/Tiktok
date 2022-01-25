@@ -1,8 +1,0 @@
-<resources>
-    <string name="main_app_name">主页</string>
-
-    <string name="main_bottombar_chat">會話</string>
-    <string name="main_bottombar_wealth">財富</string>
-    <string name="main_bottombar_discover">發現</string>
-    <string name="main_bottombar_mine">我的</string>
-</resources>
